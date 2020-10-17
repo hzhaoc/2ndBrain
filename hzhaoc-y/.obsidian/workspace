@@ -1,0 +1,89 @@
+{
+  "main": {
+    "id": "93e9dcef2dccb540",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed47f38efe4ae67b",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "CS/Algo/Spectral Clustering.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "63428f4c0796cb27",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac28b006d41f2887",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4b566bd8348e065",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "61ad98f81b1b0bfd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 172
+  },
+  "right": {
+    "id": "29711112515b0e0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c58b484f4e60576",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79dd9e0bd5f95f95",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CS/Algo/Spectral Clustering.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "CS/Algo/Untitled.md",
+    "CS/Algo/PageRank.md",
+    "CS/Big Data/Hadoop.md",
+    "CS/Algo/File Compression.md",
+    "CS/Big Data/Spark.md",
+    "CS/Big Data/Health/Untitled.md",
+    "CS/Big Data/Health/Phenotyping.md",
+    "CS/Big Data/Untitled.md",
+    "CS/Hardware & Comp Arch/Untitled.md"
+  ]
+}

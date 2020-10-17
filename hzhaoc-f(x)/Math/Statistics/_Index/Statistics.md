@@ -1,0 +1,3 @@
+-	[[Gaussian Distribution]]
+-	[[Binomial Distribution]]
+-	[[Bernoulli Distribution]]

@@ -1,0 +1,90 @@
+{
+  "main": {
+    "id": "d646a5a9c7942c1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf964d7348c98a6e",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "CS/Deep Learning/Neural Network.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5c19e63380460b71",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5f5f7cdf5679cf0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d2c2b75583097556",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "145db1ef2dab3c1a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 178
+  },
+  "right": {
+    "id": "1dcb0317d36a7fb8",
+    "type": "split",
+    "children": [
+      {
+        "id": "111de798418768b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17b80ddd50395287",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CS/Deep Learning/Neural Network.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "CS/Deep Learning/Neural Network.md",
+    "CS/Deep Learning/_Index/Deep Learning.md",
+    "www.google.com.md",
+    "asd.md",
+    "Physics/Electricity/_Index/Electricity.md",
+    "CS/Machine Learning/_Index/Machine Learning.md",
+    "CS/Machine Learning/Supvervised/Logistic Regression.md",
+    "CS/Machine Learning/Supvervised/Boosting.md",
+    "CS/Machine Learning/Supvervised/Ensemble.md",
+    "CS/Machine Learning/Supvervised/Model Evaluation.md"
+  ]
+}

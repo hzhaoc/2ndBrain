@@ -1,0 +1,1 @@
+Each sub-model is trying to train the sub-model the previous trained on previous dataset misclassified. Therefore each sub-model is sequentially dependent on previous sub-model
