@@ -113,6 +113,9 @@ points outside **d** to all core points
 			2. update nodes N by **removing all points in X**. ![[dbscan_stepremove.png]]
 4. go back to 3. 
 
+## 3. Power Iteration Clustering (PIC)
+[Spark PIC Doc](http://spark.apache.org/docs/2.3.0/mllib-clustering.html#power-iteration-clustering-pic)
+
 # Clustering evaluation metrics
 ## 0. Purity (to be added)
 - [R code document](https://www.rdocumentation.org/packages/NMF/versions/0.20.6/topics/purity)
@@ -125,6 +128,10 @@ points outside **d** to all core points
 This metric doesn't require ground truth that rand index and mutual information do.
 ![[silhouette coefficient.png]]
 Coefficients is between -1 and 1. -1 means worse, 1 means best, 0 means **overlapping cluster**. Intuitively the larger the coefficient, the better the clustering. 
+## 4. Jaccard coefficient
+Evaluate similarities between two sets.
+[Wikipedia](https://en.wikipedia.org/wiki/Jaccard_index)
+
 ## Reference
 [Evaluation of clustering](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html)
 ### limitation

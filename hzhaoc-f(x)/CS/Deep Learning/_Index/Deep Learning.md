@@ -1,1 +1,3 @@
 - [[Neural Network]]
+- [[Convolutional Neural Network]]
+- [[CNN_RNN]]

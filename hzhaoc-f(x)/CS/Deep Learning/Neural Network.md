@@ -3,7 +3,7 @@ From human brains of neural nets:
 ![[brain_neurons.png]]
 
 # Structure
-A basic structure of neural network is 1 input layer, 1 hidden layer, and 1 output layer. For each arrow in the below illustration example, it's a [[Logistic Regression]]; each activation neuron is an binary output from each logistic regression.
+A basic structure of neural network is 1 input layer, certain number of hidden layers, and 1 output layer. For each arrow in the below illustration example, it's an activation function, for example, one popular activation function is [[Logistic Regression]]; each activation neuron in one layer is an output from from each activation function with last layer's activation neurons.
 ![[neural_network.png]]
 
 # Forward Propagation
@@ -25,11 +25,15 @@ where
 # Cost Function
 We know each activation function in the network is a single [[Logistic Regression]] who input from last layer neurons, and output to next layer neurons. 
 
-Formally, for a multiclass network network, total cost including L2 [[Norm]] is:
+**One form** of cost function, for a multiclass neural network, total cost including L2 [[Norm]] is:
 $$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}[y_k^{(i)}log(h_\Theta(x^{(i)}))_k + (1-y_k^{(i)})log(1-log(h_\Theta(x^{(i)}))_k)] + \frac{\lambda}{2m}\sum_{l=1}^{L-1}\sum_{i=1}^{s_l}\sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^2$$
 where
 - $K$ is number of classes in output layer (including input and output)
 - $h_\Theta(x^{(i)}))_k$ is the **whole** binary-output function on $k_{th}$ output class, for the $i_{th}$ training example. (**Not just logistic regression to output to last layer**)
+
+**Another form** of cost function without regularization, is as below:
+$$J(\theta)=\frac{1}{2m}\sum_{i}^{m}\sum_{k}^{K}(h_\Theta(x^{(i)})_k-y^{(i)}_k)^2$$
+Same notations.
 
 # Backward Propagation
 ## Notation
@@ -47,39 +51,52 @@ Given above NN structure, denote, refer to [[Logistic Regression]]:
 ### 'Error' term
 Intuition: $\delta_j^{(l)}$ is the 'error' of node $j$ in layer $l$.
 
-For each output unit ($.*$ is element wise vector multiplication):
-- $\delta_j^{(4)}=a_j^{(4)}-y_j$
-- $\delta_j^{(3)}=(\Theta^{(3)})^T\delta^{(4)}.*g'(z^{(3)})$ where $g'(z^{(3)})=a^{(3)}.*(1-a^{(3)})$
-- $\delta_j^{(2)}=(\Theta^{(2)})^T\delta^{(3)}.*g'(z^{(2)})$
-- No $\delta_j^{(1)}$
+For each output unit ($.*$ is element wise vector multiplication, here are all vector form):
+- $\delta^{(4)}=a^{(4)}-y$
+- $\delta^{(3)}=(\Theta^{(3)})^T\delta^{(4)}.*g'(z^{(3)})$ where $g'(z^{(3)})=a^{(3)}.*(1-a^{(3)})$ for logistic regression
+- $\delta^{(2)}=(\Theta^{(2)})^T\delta^{(3)}.*g'(z^{(2)})$
+- No $\delta^{(1)}$
 
 
-### Gradient
-Likely to prove:[^1] 
-$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=a_j^{(l)}\partial_i^{(l+1)}$ (ignore regularization)
+### Gradient Derivation [^1]
+1. $$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=a_j^{(l)}\delta_i^{(l+1)}$$ 
 
-### Backward propagation
+derivation (ignore regularization):
+$\frac{\partial{L}}{\partial{\Theta_{ij}^{(l)}}}=\frac{\partial{L}}{\partial{z_{i}^{(l)}}}\frac{\partial{z_{i}^{(l)}}}{\partial{\Theta_{ij}^{(l)}}}=\delta_i^{(l)}a_j^{(l-1)}$
+
+2. $$\delta_{j}^{(l)}=\frac{\partial}{\partial{z_{j}^{(l)}}}cost(i)=[(\delta^{(l+1)})^T\Theta_j^{(l)}]g'(z_j^l)$$
+
+derivation:
+$\delta_i^{(l)}=\frac{\partial{J}}{\partial{z_i^{(l)}}}$
+$=\sum_k\frac{\partial{J}}{\partial{z_k^{(l+1)}}}\frac{\partial{z_k^{(l+1)}}}{\partial{z_i^{(l)}}}$
+$=\sum_k\delta_k^{(l+1)}\Theta_{kj}^{(l)}g'(z_j^l)$
+$=[(\delta^{(l+1)})^T\Theta_j^{(l)}]g'(z_j^l)$ where $\delta$, $\Theta_j$ here denotes horizontal vector, vertical vector. 
+
+**Be careful with the sum here because of the sum of error forms in Cost Function**
+
+Thus vectorwise we have:
+$\delta^{(l)}=(\Theta^{(l)})^T\delta^{(l+1)}.*g'(z^{(l)})$
+where $z$ is activation function for each neuron / unit
+
+### Backward propagation computation process
 Set $\Delta_{ij}^{(l)}=0$ as error vectors for all layers
 For $i=1$ to $m$:
 - Set $a^{(1)}=x^{i}$
 - Perform forward propagation to compute $a^{(l)}$ for all layers all neurons
 - Perform backward propagation to compute $\partial$ for all layers all neurons
-- $\Delta_{ij}^{(l)}:=\Delta_{ij}^{(l)} + a_j^{(l)}\partial_i^{(l+1)}$
+- $\Delta_{ij}^{(l)}:=\Delta_{ij}^{(l)} + a_j^{(l)}\delta_i^{(l+1)}$
 
 Finally:
 - $D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)} + \lambda\Theta_{ij}^{(l)}$ if $j\neq0$ (contains regularization term)
-- Or $D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}$  if  $j = 0$ (bias term)
-- $\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=D_{ij}^{(l)}$ <- now you have the gradient (likely to prove[^2])
+- $D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}$  if  $j = 0$ (bias term)
+- $\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=D_{ij}^{(l)}$ <- now you have the gradient
 
 ## Intuition
 ![[nn_bp.png]]
-$\delta_{j}^{(l)}$ is the 'error' of cost for $a_{j}^{(l)}$
+Similar intuition from FP, $\delta_{j}^{(l)}$ is the 'error' of cost for $a_{j}^{(l)}$; it's weighted sum from this layer's corresponding $\theta s$ and latter layer's 'errors' multiplied by first derivative of activation function. The gradient for each $\theta$ is the product of latter layer's corresponding error, and this layer's corresponding activation unit value.
 
-formally:
-$\delta_{j}^{(l)}=\frac{\partial}{\partial{z_{j}^{(l)}}}cost(i)=(\Theta^{(l)})^T\delta^{(l+1)}.*g'(z^{(l)})$
-where
-- $cost(i)=y^{(i)}log(h_\Theta(x^{(i)})) + (1-y^{(i)})log(1-log(h_\Theta(x^{(i)})))$
-- $i$ is $i_{th}$ training sample
+## Random Initialization
+Because if $\Theta=0$, gradient update will also be the same. So $\Theta$ needs to initialize $\Theta$ with random small values.
 
 # Other activation functions
 ![[nn_activate_func.png]]
@@ -89,5 +106,4 @@ The key idea of gradient descent to optimize $\Theta$ in neural network for $m$ 
 
 
 
-[^1]:[derivation](http://neuralnetworksanddeeplearning.com/chap2.html), [cornell CS](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/http://www.cs.cornell.edu/courses/cs5740/2016sp/resources/backprop.pdf), [Swarthmore](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://www.cs.swarthmore.edu/~meeden/cs81/s10/BackPropDeriv.pdf)
-[^2]: Same above
+[^1]: [Michael Nielsen, *Neural Networks and Deep Learning, 2.4, 2.5*](http://neuralnetworksanddeeplearning.com/)
