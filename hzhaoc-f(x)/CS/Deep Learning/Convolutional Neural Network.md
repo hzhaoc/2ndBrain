@@ -77,4 +77,9 @@ Learn from a pretrained CNN for your model:
 | Small, different dataset | Extract lower-level features from CNN as input to train a simple model like linear SVM |
 | Large, different dataset | Train new CNN from scratch or from pretrained model's weights |
 
+
+## Implementation
+- [Pytorch CNN example](https://github.com/ast0414/CSE6250BDH-LAB-DL/blob/master/2_CNN.ipynb)
+
+
 [^1]: [CNN history](https://en.wikipedia.org/wiki/Convolutional_neural_network)

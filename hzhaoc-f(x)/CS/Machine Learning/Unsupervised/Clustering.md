@@ -128,6 +128,7 @@ points outside **d** to all core points
 This metric doesn't require ground truth that rand index and mutual information do.
 ![[silhouette coefficient.png]]
 Coefficients is between -1 and 1. -1 means worse, 1 means best, 0 means **overlapping cluster**. Intuitively the larger the coefficient, the better the clustering. 
+
 ## 4. Jaccard coefficient
 Evaluate similarities between two sets.
 [Wikipedia](https://en.wikipedia.org/wiki/Jaccard_index)

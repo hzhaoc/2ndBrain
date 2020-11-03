@@ -15,8 +15,8 @@ $$P_{total}=P_{active}+P_{leakage}$$
 ### Active Power
 $$P=\frac{1}{2}C*V^2*f*\alpha$$
 where
-$C$ is [[Electricity|Capacitance]] (~chip area).
-$V$ is [[Electricity|Voltage]].
+$C$ is [[Electromagnetism|Capacitance]] (~chip area).
+$V$ is [[Electromagnetism|Voltage]].
 $f$ is **clock frequency**. It measures number of cycles CPU executes per second, measured in GHz. A cycle is a pulse synchronized by an [[Computer Hardware|Crystal Oscillator]], a helper to measure running speed of CPU. During each cycle, billions of transistors open and close. Multiple instructions may be completed in one cycle or multiple cycles.
 $\alpha$ is activity factor.
 

@@ -98,6 +98,10 @@ Similar intuition from FP, $\delta_{j}^{(l)}$ is the 'error' of cost for $a_{j}^
 ## Random Initialization
 Because if $\Theta=0$, gradient update will also be the same. So $\Theta$ needs to initialize $\Theta$ with random small values.
 
+# Implementation
+- [Pytorch NN example](https://github.com/ast0414/CSE6250BDH-LAB-DL/blob/master/1_FeedforwardNet.ipynb)
+- Loss Function: `torch.nn.CrossEntropyLoss`  works for multiclass classification problem; `torch.nn.BCELoss` may work for multilabel classification or `BCEWITHLOGITSLOSS` + `nn.sigmoid` on output layer, if `input` and `target` doesn't match in shape in `criterion` in torch implementation, may try one-hot encoding. Some references for one-hot encoding impl: [pytorch forum](https://discuss.pytorch.org/t/what-kind-of-loss-is-better-to-use-in-multilabel-classification/32203/2), [a blog](https://jamesmccaffrey.wordpress.com/2020/09/18/pytorch-multi-class-classification-using-the-mseloss-function/), [pytorch forum](https://discuss.pytorch.org/t/what-kind-of-loss-is-better-to-use-in-multilabel-classification/32203)
+
 # Other activation functions
 ![[nn_activate_func.png]]
 

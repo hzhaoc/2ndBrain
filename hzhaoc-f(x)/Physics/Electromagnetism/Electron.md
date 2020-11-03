@@ -1,0 +1,2 @@
+- 自由电子
+- [[Electromagnetism|价电子]] Valence Electron

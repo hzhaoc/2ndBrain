@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CS/Deep Learning/Convolutional Neural Network.md",
+            "file": "CS/Deep Learning/Neural Network.md",
             "mode": "preview"
           }
         }
@@ -64,7 +64,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Deep Learning/Convolutional Neural Network.md"
+                "file": "CS/Deep Learning/Neural Network.md"
               }
             }
           }
@@ -76,15 +76,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "CS/Deep Learning/Convolutional Neural Network.md",
-    "CS/Deep Learning/CNN_RNN.md",
-    "CS/Deep Learning/_Index/Deep Learning.md",
-    "CS/Deep Learning/Untitled.md",
     "CS/Deep Learning/Neural Network.md",
-    "Math/Permutation/Permutation.md",
-    "Math/Linear Algebra/Norm.md",
-    "Info/Entropy.md",
-    "Info/Mutual Information.md",
-    "Math/Statistics/Binomial Distribution.md"
+    "CS/Deep Learning/RNN.md",
+    "CS/Deep Learning/ResNet.md",
+    "CS/Deep Learning/_Index/Deep Learning.md",
+    "CS/Deep Learning/Convolutional Neural Network.md",
+    "Info/_Index/Informatics.md",
+    "CS/Deep Learning/CRNN.md",
+    "CS/Deep Learning/Untitled.md",
+    "Math/Linear Algebra/Dimensionality Reduction.md",
+    "Math/Linear Algebra/_Index/Linear Algebra.md"
   ]
 }

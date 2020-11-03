@@ -1,4 +1,4 @@
-**Electrical resistivity** and its reverse **electrical conductivity**, describe an intrinsic property of a material that quantifies how strongly it resists or conducts electric [[Electricity|current]]. Low resistivity materials are usually referred to as **conductors**, high resistivity materials are usually referred to as **insulators**, mid resistivity materials are usually referred to as [[Computer Hardware|semiocnductors]]. Common unit of measure: $\Omega*m$.
+**Electrical resistivity** and its reverse **electrical conductivity**, describe an intrinsic property of a material that quantifies how strongly it resists or conducts electric [[Electromagnetism|current]]. Low resistivity materials are usually referred to as **conductors**, high resistivity materials are usually referred to as **insulators**, mid resistivity materials are usually referred to as [[Computer Hardware|semiocnductors]]. Common unit of measure: $\Omega*m$.
 
 # Calculation
 ## from shape
@@ -18,7 +18,7 @@ $\rho_0$ is when temperature is $0^{\circ}C$,
 $\alpha$ is a coefficient, for many metals in normal temperatures it's around $0.004$.
 
 ## from electromagnetism
-Resistivity can also be calculated by [[Electricity|Current]] and [[Electricity|Electric Field]]:
+Resistivity can also be calculated by [[Electromagnetism|Current]] and [[Electromagnetism|Electric Field]]:
 $$\rho=\frac{E}{J}$$
 where
 $E$ is magnitude of electric field,

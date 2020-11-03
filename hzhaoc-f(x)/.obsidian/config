@@ -66,7 +66,10 @@
     "ConvNets",
     "multiclasses",
     "pre",
-    "pretrained"
+    "pretrained",
+    "multilabel",
+    "impl",
+    "param"
   ],
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "_img"
