@@ -1,1 +1,5 @@
 - [[Basic]]
+- [[Bloom Filter]]
+- [[Hash Table]]
+- [[Heap]]
+- [[Tree]]

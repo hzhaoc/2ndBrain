@@ -79,7 +79,8 @@ According to our assumption, when $n=k$, Huffman Codes tree $B(S_{12, 3,...,k}, 
 To prove $B(S_{1, 2, 3,...,k}, P)$ is Huffman Codes, since $B(S_{12, 3,...,k}, P)$ is optimal Huffman Codes, we only need to prove $s_1$, $s_2$ are at the deepest of the tree. Assume they are not, then there are $s_i$, $s_j$ that are deeper and have lower frequencies. This violates the assumption $s_1$, $s_2$ are the ones with lowest frequency. Thus $B(S_{1, 2, 3,...,k}, P)$ is Huffman Codes.
 
 To prove $B(S_{1, 2, 3,...,k}, P)$ is optimal binary codes tree, assume there exists $B^{'}(S_{1, 2, 3,...,k}, P)$ that makes $B^{'}<B$, and $s_1^{'}$, $s_2^{'}$ are not the two with lowest frequencies $p_1^{'}$, $p_2^{'}$, because  $B(S_{1, 2, 3,...,k}, P) = B(S_{12, 3,...,k}, P)+p_{1}+p_{2}\leq B(S_{12, 3,...,k}, P)+p_1^{'}+p_{2}^{'}=B^{'}(S_{1, 2, 3,...,k}, P)$, there's a better $B$ than $B^{'}$. Therefore assumption fails. $B(S_{1, 2, 3,...,k}, P)$ is optimal binary codes tree.
-
+### Code
+See [code implementation](https://github.com/hzhaoc/2ndBrain/blob/master/code/algo/tree.py)
 ### Reference
 -	[Coursera: Algorithm - Peking University](https://www.coursera.org/lecture/algorithms/058ha-fu-man-suan-fa-de-zheng-que-xing-zheng-ming-nLQya)
 -	[Coursera: Greedy Algorithm - Stanford University](https://www.coursera.org/learn/algorithms-greedy)

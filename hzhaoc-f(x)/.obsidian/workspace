@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "5ca409f4eb563d29",
+        "id": "cbe7ba90239f4b4f",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CS/Data Structure/Heap.md",
+            "file": "CS/Data Structure/Union Find.md",
             "mode": "preview"
           }
         }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298
+    "width": 232
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Data Structure/Heap.md",
+                "file": "CS/Data Structure/Union Find.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "CS/Data Structure/Heap.md",
-    "Untitled.md",
-    "CS/Data Structure/Basic.md",
-    "Physics/Electromagnetism/_Index/Electromagnetism.md",
-    "Info/Entropy.md",
     "CS/Data Structure/Untitled.md",
-    "CS/Data Structure/Data Structure.md",
+    "CS/Data Structure/Bloom Filter.md",
     "CS/Data Structure/_Index/Data Structure.md",
-    "CS/Algo/Binary Encoding.md",
-    "CS/Algo/_Index/Algorithm.md"
+    "CS/Data Structure/Basic.md",
+    "CS/Deep Learning/Convolutional Neural Network.md",
+    "CS/Deep Learning/Neural Network.md",
+    "CS/Deep Learning/ResNet.md",
+    "CS/Deep Learning/RNN.md",
+    "CS/Machine Learning/Supvervised/Boosting.md",
+    "CS/Machine Learning/Supvervised/Ensemble.md"
   ]
 }
