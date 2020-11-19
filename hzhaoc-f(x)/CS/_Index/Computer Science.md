@@ -2,7 +2,7 @@
 - [[Cloud Computing]]
 - [[Computer Architecture]]
 - [[Compiler]]
-- [[Data Structure]]
+- [[CS/Data Structure/_Index/Data Structure]]
 - [[Datatbase System]]
 - [[Deep Learning]]
 - [[Computer Hardware]]

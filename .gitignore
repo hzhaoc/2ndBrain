@@ -1,0 +1,11 @@
+*.pyc
+.DS_Store
+*.log
+/.ipynb_checkpoints
+/__pycache__
+/code/algo/data
+/code/algo/.idea
+/code/algo/*.docx
+/code/algo/*.xlsx
+/code/algo/.ipynb_checkpoints
+/code/algo/__pycache__

@@ -11,7 +11,7 @@
           "type": "markdown",
           "state": {
             "file": "CS/Algo/Spectral Clustering.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -76,14 +76,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "CS/Algo/Untitled.md",
+    "CS/Algo/Spectral Clustering.md",
     "CS/Algo/PageRank.md",
-    "CS/Big Data/Hadoop.md",
     "CS/Algo/File Compression.md",
     "CS/Big Data/Spark.md",
-    "CS/Big Data/Health/Untitled.md",
+    "CS/Big Data/Hadoop.md",
     "CS/Big Data/Health/Phenotyping.md",
-    "CS/Big Data/Untitled.md",
-    "CS/Hardware & Comp Arch/Untitled.md"
+    "CS/Hardware & Comp Arch/Untitled.md",
+    "CS/Big Data/Health/Medical Ontology.md",
+    "CS/Algo/Untitled.md",
+    "CS/Big Data/Health/Untitled.md"
   ]
 }

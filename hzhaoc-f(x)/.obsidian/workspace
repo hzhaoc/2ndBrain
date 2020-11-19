@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CS/Deep Learning/Neural Network.md",
+            "file": "CS/Data Structure/Heap.md",
             "mode": "preview"
           }
         }
@@ -40,7 +40,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ""
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
               }
             }
           }
@@ -48,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222
+    "width": 298
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -64,7 +69,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Deep Learning/Neural Network.md"
+                "file": "CS/Data Structure/Heap.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -76,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "CS/Deep Learning/Neural Network.md",
-    "CS/Deep Learning/RNN.md",
-    "CS/Deep Learning/ResNet.md",
-    "CS/Deep Learning/_Index/Deep Learning.md",
-    "CS/Deep Learning/Convolutional Neural Network.md",
-    "Info/_Index/Informatics.md",
-    "CS/Deep Learning/CRNN.md",
-    "CS/Deep Learning/Untitled.md",
-    "Math/Linear Algebra/Dimensionality Reduction.md",
-    "Math/Linear Algebra/_Index/Linear Algebra.md"
+    "CS/Data Structure/Heap.md",
+    "Untitled.md",
+    "CS/Data Structure/Basic.md",
+    "Physics/Electromagnetism/_Index/Electromagnetism.md",
+    "Info/Entropy.md",
+    "CS/Data Structure/Untitled.md",
+    "CS/Data Structure/Data Structure.md",
+    "CS/Data Structure/_Index/Data Structure.md",
+    "CS/Algo/Binary Encoding.md",
+    "CS/Algo/_Index/Algorithm.md"
   ]
 }
