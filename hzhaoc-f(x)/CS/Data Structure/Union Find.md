@@ -67,3 +67,8 @@ Union-find
     -   Union() reduces to two Find()
 
     -   Find() and Union() worse case takes O(logn)
+
+
+## Applications
+- Lazy Union [code](https://github.com/hzhaoc/utils/blob/main/algo/union_find.py)
+- [Clustering problem, function C3W2_2](https://github.com/hzhaoc/utils/blob/main/algo/HW.py)

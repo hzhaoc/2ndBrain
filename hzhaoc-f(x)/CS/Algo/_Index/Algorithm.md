@@ -1,1 +1,2 @@
 - [[Binary Encoding]]
+- [[Dynamic Programming]]

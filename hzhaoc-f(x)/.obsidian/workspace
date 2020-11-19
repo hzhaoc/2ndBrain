@@ -4,15 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "cbe7ba90239f4b4f",
+        "id": "1482a18370debdbf",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "CS/Data Structure/Union Find.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Data Structure/Union Find.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +82,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "CS/Data Structure/Untitled.md",
-    "CS/Data Structure/Bloom Filter.md",
-    "CS/Data Structure/_Index/Data Structure.md",
-    "CS/Data Structure/Basic.md",
-    "CS/Deep Learning/Convolutional Neural Network.md",
-    "CS/Deep Learning/Neural Network.md",
-    "CS/Deep Learning/ResNet.md",
-    "CS/Deep Learning/RNN.md",
-    "CS/Machine Learning/Supvervised/Boosting.md",
-    "CS/Machine Learning/Supvervised/Ensemble.md"
+    "CS/Programming/_Index/Programming.md",
+    "CS/Programming/Some coding notes.md",
+    "CS/Programming/Compiler.md",
+    "CS/Programming/Object-oriented Programming.md",
+    "CS/Programming/Untitled.md",
+    "CS/Programming/Programming.md",
+    "CS/_Index/Computer Science.md",
+    "CS/Algo/_Index/Algorithm.md",
+    "CS/Algo/Untitled.md",
+    "CS/Algo/Binary Encoding.md"
   ]
 }

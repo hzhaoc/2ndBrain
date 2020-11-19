@@ -3,3 +3,4 @@
 - [[Hash Table]]
 - [[Heap]]
 - [[Tree]]
+- [[Union Find]]

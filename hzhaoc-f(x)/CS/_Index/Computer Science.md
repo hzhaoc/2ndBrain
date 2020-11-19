@@ -1,7 +1,7 @@
 - [[Algorithm]]
 - [[Cloud Computing]]
 - [[Computer Architecture]]
-- [[Compiler]]
+- [[CS/Compiler/_Index/Compiler]]
 - [[CS/Data Structure/_Index/Data Structure]]
 - [[Datatbase System]]
 - [[Deep Learning]]
@@ -9,3 +9,4 @@
 - [[Machine Learning]]
 - [[Network Security]]
 - [[Operating System]]
+- [[CS/Programming/_Index/Programming]]
