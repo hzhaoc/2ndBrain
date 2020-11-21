@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "CS/Cloud computing/Spark.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -66,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CS/Cloud computing/Spark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "CS/Cloud computing/Spark.md",
+    "CS/Programming/Python/Generator.md",
+    "CS/Programming/Python/_Index/Python.md",
     "CS/Programming/_Index/Programming.md",
-    "CS/Programming/Some coding notes.md",
-    "CS/Programming/Compiler.md",
-    "CS/Programming/Object-oriented Programming.md",
+    "CS/Programming/Python/Untitled.md",
+    "CS/Programming/Python/_Index/Untitled.md",
     "CS/Programming/Untitled.md",
-    "CS/Programming/Programming.md",
-    "CS/_Index/Computer Science.md",
-    "CS/Algo/_Index/Algorithm.md",
-    "CS/Algo/Untitled.md",
-    "CS/Algo/Binary Encoding.md"
+    "CS/Programming/Some coding notes.md",
+    "CS/Cloud computing/Hadoop.md",
+    "CS/Algo/Dynamic Programming.md"
   ]
 }
