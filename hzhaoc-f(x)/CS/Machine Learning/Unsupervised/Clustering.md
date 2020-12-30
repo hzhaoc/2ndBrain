@@ -1,5 +1,8 @@
 # I. Classical
 ## 1. K-means
+https://stanford.edu/~cpiech/cs221/handouts/kmeans.html
+> k-means is  one of  the simplest unsupervised  learning  algorithms  that  solve  the well  known clustering problem. The procedure follows a simple and  easy  way  to classify a given data set  through a certain number of clusters (assume k clusters) fixed apriori The main idea is to define k centers, one for each cluster. These centers  should  be placed in a cunning  way  because of  different  location  causes different  result. So, the better choice is to place them  as  much as possible  far away from each other. The  next  step is to take each point belonging  to a  given data set and associate it to the nearest center. When no point  is  pending,  the first step is completed and an early group age  is done. At this point we need to re-calculate k new centroids as barycenter of the clusters resulting from the previous step. After we have these k new centroids, a new binding has to be done  between  the same data set points and the nearest new center. A loop has been generated. As a result of  this loop we may notice that the k centers change their location step by step until no more changes are done or in other words centers do not move any more. 
+
 Complexity: $O(mKnt)$ 
 where 
 m: data dimension
@@ -10,11 +13,12 @@ t: number of iterations
 ## 2. Hierarchical clustering
 Two methods:
 - Agglomerative (bottom-up), usually more efficient
+> Basically in iteration, merge closest two point into one cluster
 - Divisive (top-down)
 
 ## 3. Gaussian mixture model
 ### PDF
-Model assumes vector variable $X$ follows $K$ interdependent multivariate Gaussian distributions. PDF is as follows:
+Model assumes vector variable $X$ follows $K$ (cluster number) **interdependent** multivariate Gaussian distributions. PDF is as follows:
 $$p(x)=\sum_{k=1}^{K}\pi_{k}N(x|\mu_{k},\Sigma_{k})$$
 where
 $\pi_k$ is the weight for the $k_{th}$ probability of $x$ and $\sum_{k=1}^{K}\pi_k=1$
@@ -22,18 +26,18 @@ $\pi_k$ is the weight for the $k_{th}$ probability of $x$ and $\sum_{k=1}^{K}\pi
 ### EM (parameters convergence process)
 #### Step 0: Initialize $\pi_k$, $\mu_k$, $\Sigma_k$
 *(recommended)*
-$\mu_k$ = $\mu_k$ = $(\mu_{k,1},\mu_{k,2},...,\mu_{k,m})$ ($(1,2,..m)$ is for dimensions of data $X$) from K-means results.
+$\mu_k$ = $(\mu_{k,1},\mu_{k,2},...,\mu_{k,m})$ ($m$ is dimension of $X$) from K-means results.
 
 $\Sigma_k$=covariance of $X_k$ from same K-means results. (See [[Gaussian Distribution]] for detail)
 
 $\pi_k$=$\frac{sizeof(k)}{n}$ where $n$ is total number of training data $X$
 
-#### Step 1: E 
+#### Step 1: E (expectation)
 Assign each point $X_i$ a score $\gamma_{ik}$ for each cluster $k$:
 $$\gamma_{ik}=\frac{\pi_k\mathcal{N}(x_i|\mu_k,\Sigma_k)}{\sum_{j=1}^{K}\pi_j\mathcal{N}(x_i|\mu_j,\Sigma_j)}$$
 The denominator here is to normalize this score to $[0,1]$. Obviously $\sum_j^K\gamma_{ij}=1$, and $\sum_i^n\sum_j^k\gamma_{ij}=n$, $\forall{i}\in{[1,n]}$, where $n$ is total number of $X$.
 
-#### Step 2: M
+#### Step 2: M (maximization)
 Update $\pi_k$, $\mu_k$, $\Sigma_k$, using $\gamma_{ik}$ for each cluster $k$:
 - $\mathcal{N}_k=\sum_i^n\gamma_{ik}$, $n$ is total number of $X$, intuitively this is the 'size' of cluster $k$
 - $\mu_k=\frac{\sum_i^n\gamma_{ik}X_i}{\mathcal{N}_k}$, intuitively this is the new center of cluster $k$.
@@ -41,7 +45,7 @@ Update $\pi_k$, $\mu_k$, $\Sigma_k$, using $\gamma_{ik}$ for each cluster $k$:
 - $\pi_k=\frac{\mathcal{N}_k}{n}$, intuitively this is the portion of $X$ that belongs to cluster $k$.
 
 #### Step 3: Check convergence. 
-If not convergent, go back to **Step 1**.
+If not convergent (if centers move or not), go back to **Step 1**.
 
 #### Step 4: Return
 End.
@@ -121,7 +125,8 @@ points outside **d** to all core points
 - [R code document](https://www.rdocumentation.org/packages/NMF/versions/0.20.6/topics/purity)
 - [Formula](https://stats.stackexchange.com/questions/95731/how-to-calculate-purity)
 ## 1. rand index
-![[clustering_randindex.png]]
+https://en.wikipedia.org/wiki/Rand_index Wiki illustrates better
+
 ## 2. [[Informatics|Mutual Information]]
 ![[mutualinformation.png]]
 ## 3. silhouette coefficient

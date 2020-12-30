@@ -14,7 +14,7 @@ Maintain evolving set S << U (a fixed size of hash values from key through hash 
 - Solving collision by
 	-	Separate chaining (make the hashed value a linked list)
 	-	Open addressing (probing: linear probing, random probing, double hashing)
--	Example: python dict
+-	Example: **python dict**
 Python Dictionary uses a hash table (extra memory space allocated) to store key, hash, values in different ‘slots’ (each slot with one set of hash, key, value) for the information in the dictionary. 
 -	How Dictionary in Python works: (from Stack Overflow)
 	1.	When a new dict is initialized: the table starts with 8 slots. (slot indice i = hash(key) & mask, where mask = PyDictMINSIZE - 1).

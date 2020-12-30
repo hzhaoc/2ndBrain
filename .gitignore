@@ -3,6 +3,7 @@
 *.log
 /.ipynb_checkpoints
 /__pycache__
+/.readings
 /code/algo/data
 /code/algo/.idea
 /code/algo/*.docx

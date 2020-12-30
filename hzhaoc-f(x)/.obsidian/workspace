@@ -4,15 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1482a18370debdbf",
+        "id": "6fc47c0e47118a39",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "CS/Cloud computing/Spark.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Cloud computing/Spark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +82,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "CS/Cloud computing/Spark.md",
-    "CS/Programming/Python/Generator.md",
-    "CS/Programming/Python/_Index/Python.md",
-    "CS/Programming/_Index/Programming.md",
-    "CS/Programming/Python/Untitled.md",
-    "CS/Programming/Python/_Index/Untitled.md",
-    "CS/Programming/Untitled.md",
-    "CS/Programming/Some coding notes.md",
-    "CS/Cloud computing/Hadoop.md",
-    "CS/Algo/Dynamic Programming.md"
+    "Math/Permutation/Permutation.md",
+    "Math/Statistics/Bernoulli Distribution.md",
+    "Math/Statistics/Binomial Distribution.md",
+    "Math/Statistics/Gaussian Distribution.md",
+    "CS/Data Structure/Heap.md",
+    "CS/Data Structure/Hash Table.md",
+    "CS/Data Structure/Bloom Filter.md",
+    "CS/Data Structure/Basic.md",
+    "CS/Data Structure/Tree.md",
+    "CS/Data Structure/Union Find.md"
   ]
 }
