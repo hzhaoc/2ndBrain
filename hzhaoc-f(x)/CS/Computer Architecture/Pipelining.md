@@ -38,4 +38,4 @@ For data dependencies hazards, INSTALL or FOWARD.
 Overall CPI = CPI of program + % of insts mispredicted * penalty for misprediction.
 
 ## How many stages
-When stages are increased in a pipeline, clock rates increase, leading to, according to [[Computer Architecture|Performance]] formula, higher CPU active power, and, according to [[Computer Architecture|CPU time]]/execution time formula, CPU time decreased. If 30~40-stage pipeline has optimal performance only, usually 10 - 15 stages are better when CPU power consumption is also considered.
+When stages are increased in a pipeline, clock rates increase, at the same time CPI will be higher due to more hazards from deep stages, overall leading to, according to [[Computer Architecture|Performance]] formula, higher CPU active power, and, according to [[Computer Architecture|CPU time]]/execution time formula, CPU time decreased or increased where there will be an optimal performance for some number of stages. If 30~40-stage pipeline has optimal performance only, usually 10 - 15 stages are better when CPU power consumption is also considered.

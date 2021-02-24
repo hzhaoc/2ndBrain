@@ -4,12 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6fc47c0e47118a39",
+        "id": "b0f327606e5470de",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "CS/Computer Architecture/Branch.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -37,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ALU",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CS/Computer Architecture/Branch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Math/Permutation/Permutation.md",
-    "Math/Statistics/Bernoulli Distribution.md",
-    "Math/Statistics/Binomial Distribution.md",
-    "Math/Statistics/Gaussian Distribution.md",
-    "CS/Data Structure/Heap.md",
-    "CS/Data Structure/Hash Table.md",
-    "CS/Data Structure/Bloom Filter.md",
-    "CS/Data Structure/Basic.md",
-    "CS/Data Structure/Tree.md",
-    "CS/Data Structure/Union Find.md"
+    "CS/Computer Architecture/Branch.md",
+    "CS/Computer Architecture/Performance.md",
+    "CS/Computer Architecture/Pipelining.md",
+    "CS/Computer Architecture/Instruction Level Parallelism.md",
+    "CS/Hardware/Instruction Register.md",
+    "CS/Computer Architecture/Instruction scheduling.md",
+    "CS/Computer Architecture/ILP.md",
+    "CS/Computer Architecture/Power & Cost.md",
+    "CS/Computer Architecture/_Index/Computer Architecture.md",
+    "CS/Computer Architecture/Fabrication cost.md"
   ]
 }

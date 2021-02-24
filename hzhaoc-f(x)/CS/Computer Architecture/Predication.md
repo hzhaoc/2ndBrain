@@ -4,16 +4,17 @@ For deep `LOOP`,`RET`,`FUN`, large `IF-ELSE-THEN`, use prediction;
 for small `IF-ELSE-THEN`, use predication.
 
 ## Simplest predication
-Conditional move. 
--	MIPS: `MOVZ x1, x2, COND` （if 0）, `MOVN x1, x2, COND` (if not 0)
--	x86: `CMOV`.
--	Full predication
-	-	ITANIUM.
-	```
-	MPEQZ p1, p2, R1
-	(p2) ADD1 R2, R2, 1
-	(p1) ADD1 R3, R3, 1
-	```
+- If conversion
+	- Conditional move. 
+		-	MIPS: `MOVZ x1, x2, COND` （if 0）, `MOVN x1, x2, COND` (if not 0)
+		-	x86: `CMOV`, `CMOVNZ`, `CMOVGT`
+		-	Full predication
+			-	ITANIUM: support condition bit on EVERY instruction
+			```
+			MPEQZ p1, p2, R1
+			(p2) ADD1 R2, R2, 1
+			(p1) ADD1 R3, R3, 1
+			```
 
 
 ## Summary

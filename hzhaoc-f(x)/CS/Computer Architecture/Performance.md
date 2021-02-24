@@ -17,6 +17,12 @@ Perspectives to think about computer architecture:
 ### Benchmark performance metrics
 - (geometric) Average execution time
 - CPU time = $\sum{(\frac{instructions}{program} * \frac{cycles}{instruction})} * \frac{time}{cycle}$
-number of instructions per program is affected by algorithm, compiler, instruction set;
-cycles per instruction are affected by instruction set, processor design;
-lock cycle time is affected by processor design, circuit design, transistor physics.
+	-	number of instructions per program is affected by algorithm, compiler, **instruction set**;
+	-	cycles per instruction are affected by **instruction set**, **processor design**;
+	-	lock cycle time is affected by **processor design**, circuit design, transistor physics.
+
+#### Amdahl's Law:
+$$Overall Speedup = \frac{1}{(1- P) + \frac{P}{S}}$$
+where
+$P$ is part of the program execution **time** (not instructions) that is enhanced
+$S$ the speedup for that part

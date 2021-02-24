@@ -6,7 +6,7 @@ If a branch is not taken the PC (program counter) just advances to the next inst
 - What is the next PC? (where is the branch going? )
 
 ## Prediction accuracy
-`CPI = 1 + (Mispredicted branch # / Inst #) * (stage # before branch-taken-or-not-stage)`
+`CPI = 1 + (Mispredicted branch # / Inst #) * (penalty / mispred branch #)`
 Mispredictions / Instructions is dependent on the predictor accuracy. Penalty / Misprediction is dependent on the size of the pipeline. The deeper the pipeline the more important it is to have an accurate branch predictor.
 
 ## Predictors
@@ -29,7 +29,7 @@ Model: $$PC_{next}=f(PC_{now},\;history[PC_{now}])$$
 A table indexed by input PC, outputs predicted PC. Mapping steps:
 1. At `Fetch` the processor has the PC of an inst.
 2. Looks in the BTB for the PC.
-3. Reads predicted PC in RTB.
+3. Reads predicted PC in BTB.
 4. Compares predicted PC with actual PC later  (`ALU` ?) in pipeline.
 5. If not same, update BTB with new PC
 - **Realistic BTB**
@@ -66,11 +66,11 @@ Works well with $(NNT)^*$  (repeat (not taken, not taken, taken) ) pattern, or $
 It will predict all patterns of $length \leq n+1$. But cost ($n+2*2^n$) bit per entry. This can be needed in loops that's long $(N..NT)^*$ pattern.
 
 ### history based with shared counter predictor
-#### PShare
+- #### PShare
 Private history (each branch inst has its own history bits pattern). Shared counters (between all branches) - good for small loops and predictable short patterns.
 Bits cost much lower than n-bit predictor with 2-bit counters.
 ![[history_with_shared_counter_predictor.png]]
-#### GShare
+- #### GShare
 Global history and shared counter - good for correlated branches.
 
 ### Tournament predictor
