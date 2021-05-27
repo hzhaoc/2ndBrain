@@ -1,4 +1,0 @@
-- [[CS/Programming/Compiler]]
-- [[Object-oriented Programming]]
-- [[Some coding notes]]
-- [[Python]]

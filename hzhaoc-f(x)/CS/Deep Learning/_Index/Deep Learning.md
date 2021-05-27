@@ -1,4 +1,0 @@
-- [[Neural Network]]
-- [[Convolutional Neural Network]]
-- [[RNN]]
-- [[ResNet]]

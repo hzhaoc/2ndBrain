@@ -1,0 +1,7 @@
+- [[Computer Science/Programming/Compiler]]
+- [[Object-oriented Programming]]
+- [[Some coding notes]]
+- [[Python]]
+- [[Machine Code]]
+- [[Assembly Language]]
+- [[C, C++]]

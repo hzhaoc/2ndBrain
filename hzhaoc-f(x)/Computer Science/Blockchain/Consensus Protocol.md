@@ -1,0 +1,6 @@
+# Proof of Stake
+Proof-of-work is the blockchain protocol used by bitcoin. Proof-of-work began a revolution: it enabled the creation of secure, permissionless, distributed networks. But to achieve consensus for each new block, proof-of-work requires an enormous amount of energy: an amount so large that the supported blockchains struggle to sustain and scale to the performance requirements of global networks.
+
+# Proof of Work
+Proof-of-stake answers the performance and energy-use challenges of proof-of-work, and arrives at a more sustainable solution. Instead of relying on 'miners' to solve computationally complex equations to create new blocks – and rewarding the first to do so – proof of stake selects participants (in the case of Cardano, stake pools) to create new blocks based on the stake they control in the network.<br>
+This enables networks to scale horizontally, increasing performance by incorporating additional nodes, rather than vertically, through the addition of more powerful hardware. The resulting difference in energy use can be analogized to that between a household and a small country. PoS is positioned scale to the mass market; PoW is not.

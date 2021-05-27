@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b0f327606e5470de",
+        "id": "f853a37a7ff21936",
         "type": "leaf",
-        "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "CS/Computer Architecture/Branch.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -53,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 232
+    "width": 380
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -69,10 +65,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Computer Architecture/Branch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -85,16 +82,17 @@
     "width": 300,
     "collapsed": true
   },
+  "active": "f853a37a7ff21936",
   "lastOpenFiles": [
-    "CS/Computer Architecture/Branch.md",
-    "CS/Computer Architecture/Performance.md",
-    "CS/Computer Architecture/Pipelining.md",
-    "CS/Computer Architecture/Instruction Level Parallelism.md",
-    "CS/Hardware/Instruction Register.md",
-    "CS/Computer Architecture/Instruction scheduling.md",
-    "CS/Computer Architecture/ILP.md",
-    "CS/Computer Architecture/Power & Cost.md",
-    "CS/Computer Architecture/_Index/Computer Architecture.md",
-    "CS/Computer Architecture/Fabrication cost.md"
+    "Computer Science/Computer Architecture/Instruction.md",
+    "Computer Science/Computer Architecture/Instruction Scheduling.md",
+    "Computer Science/Computer Architecture/Untitled.md",
+    "Computer Science/Computer Architecture/ILP.md",
+    "Computer Science/Computer Architecture/Architect Fundamental - Power & Energy.md",
+    "Computer Science/Computer Architecture/_Index/Computer Architecture.md",
+    "Computer Science/Computer Architecture/Predicate.md",
+    "Computer Science/Computer Architecture/Instruction scheduling.md",
+    "Computer Science/Computer Architecture/Architect Fundamental.md",
+    "Computer Science/Computer Architecture/ILP - Pipelining - Branch.md"
   ]
 }

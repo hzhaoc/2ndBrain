@@ -1,0 +1,43 @@
+A **non-fungible token** (**NFT**) is a unique digital file stored on a digital ledger called a [blockchain](https://en.wikipedia.org/wiki/Blockchain "Blockchain"). NFTs are not mutually interchangeable and thus are not [fungible](https://en.wikipedia.org/wiki/Fungible "Fungible"). An NFT is created by uploading a file, such as an artwork, to an NFT auction market. This creates a copy of the file, which is recorded as an NFT on the digital ledger. The NFT can then be bought with [cryptocurrency](https://en.wikipedia.org/wiki/Cryptocurrency "Cryptocurrency") and resold. NFTs are used to commodify digital items, such as digital art, video game items, or music.
+
+Since one of the earliest NFT art projects was created in 2017, as of 2021 NFTs have grown to become a [speculative](https://en.wikipedia.org/wiki/Speculation "Speculation") market. There has been some concern over the [carbon emitted](https://en.wikipedia.org/wiki/Carbon_emission "Carbon emission") per NFT transaction.
+
+## Description
+A non-fungible token (NFT) is a unique digital file stored on a digital ledger called a [blockchain](https://en.wikipedia.org/wiki/Blockchain "Blockchain").[\[1\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-2) An NFT is a [cryptographic token](https://en.wikipedia.org/wiki/Cryptographic_token "Cryptographic token"), but unlike cryptocurrencies such as [bitcoin](https://en.wikipedia.org/wiki/Bitcoin "Bitcoin") and many network or utility tokens,[\[b\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-3) they are not mutually interchangeable, and thus are not [fungible](https://en.wikipedia.org/wiki/Fungible "Fungible").[\[2\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-4)[\[3\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-5) An NFT is created by uploading a file, such as an artwork, to an NFT auction market, such as KnownOrigin, Rarible, or OpenSea.[\[4\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-6) This creates a copy of the file recorded on the digital ledger as an NFT, which can be bought with cryptocurrency and resold. This results in a market where the NFT can go up or down in value, but the owner does not have exclusive access to the file.[\[5\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-7) As such, NFTs representing media have been analogized to [autographs](https://en.wikipedia.org/wiki/Autograph_collecting "Autograph collecting").[\[6\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-8) A person who uploads a certain work as an NFT does not have to prove that they're the original artist,[\[7\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-9) and there have been numerous cases where art was used for NFTs without the creator's permission.[\[8\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-10)[\[9\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-11)
+
+## Uses
+The unique identity and ownership of a non-fungible token is verifiable via the blockchain leger, creating [artificial scarcity](https://en.wikipedia.org/wiki/Artificial_scarcity "Artificial scarcity") of the digital file. NFTs are also used to create the possibility of asset interoperability across multiple platforms.
+
+### Digital art
+
+[Art](https://en.wikipedia.org/wiki/Art "Art") was an early use case for NFTs, because of the purported ability of NFTs to provide [proof of authenticity](https://en.wikipedia.org/wiki/Authenticity_in_art "Authenticity in art") and ownership of [digital art](https://en.wikipedia.org/wiki/Digital_art "Digital art"), which, unlike physical art, does not have a preexisting means of recognizing authenticity.[\[10\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-12) Although an artist can sell one or more NFTs representing a work, the artist can still retain the copyright to the work represented by the NFT.[\[11\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-13)
+
+### Games
+
+NFTs can also be used to represent [in-game assets](https://en.wikipedia.org/wiki/Game_asset "Game asset") which are controlled by the user instead of the [game developer](https://en.wikipedia.org/wiki/Video_game_developer "Video game developer").[\[12\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-14) NFTs allow assets to be traded on third-party marketplaces without permission from the game developer.
+
+## Standards in blockchains\[[edit](https://en.wikipedia.org/w/index.php?title=Non-fungible_token&action=edit&section=5 "Edit section: Standards in blockchains")\]
+
+Specific token standards have been created to support the use of a [blockchain](https://en.wikipedia.org/wiki/Blockchain "Blockchain") in gaming. These include the [Ethereum](https://en.wikipedia.org/wiki/Ethereum "Ethereum") ERC-721 standard of _[CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties "CryptoKitties"),_ and the more recent ERC-1155 standard.[\[13\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-15) Token standards also exist on other blockchains that support NFT like Bitcoin Cash and FLOW blockchain.[\[14\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-CrowdFund_Insider_2021-03-07-16)[\[15\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-Forbes_2021-02-28-17)
+
+### Ethereum
+
+#### ERC-721
+
+ERC-721 was the first standard for representing non-fungible digital assets on the Ethereum blockchain. ERC-721 is an inheritable [Solidity](https://en.wikipedia.org/wiki/Solidity "Solidity") [smart contract](https://en.wikipedia.org/wiki/Smart_contract "Smart contract") standard, meaning that developers can easily create new ERC-721-compliant contracts by importing it from the OpenZeppelin library.[\[16\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-18)
+
+#### ERC-1155
+
+ERC-1155 brings the idea of "semi-fungibility" to the NFT world, as well as providing a superset of ERC-721 functionality (meaning that an ERC-721 asset could be built using ERC-1155).[\[17\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-19)
+
+### Bitcoin
+
+"NFT1" was introduced onto the [Bitcoin Cash](https://en.wikipedia.org/wiki/Bitcoin_Cash "Bitcoin Cash") blockchain in 2019 as part of the [Simple Ledger Protocol](https://en.wikipedia.org/w/index.php?title=Simple_Ledger_Protocol&action=edit&redlink=1 "Simple Ledger Protocol (page does not exist)") (SLP) token structure. You can use the protocol to support non-fungible tokens by minting a non-divisible token supply of 1 without a minting baton, called a simple NFT. The specification codifies a more capable type of NFT that allows grouping of many NFTs together, called NFT1.[\[18\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-Bitcoin_Cash_SLP_Token_Standard_2019-07-11-20)
+
+### Flow
+
+On the Flow blockchain, created by the team behind [Cryptokitties](https://en.wikipedia.org/wiki/CryptoKitties "CryptoKitties"),[\[19\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-21) the Cadence programming language represents each NFT as a resource object that users store in their accounts. Resources have important ownership rules that are enforced by the type system. They can only have one owner, cannot be copied, and cannot be accidentally or maliciously lost or duplicated. These protections ensure that owners know that their NFT is safe and can represent an asset that has real value.[\[20\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-FLOW_NFT_Specification_2021-03-04-22)
+
+## Carbon emissions
+
+The British [AI artist](https://en.wikipedia.org/wiki/Artificial_intelligence_art "Artificial intelligence art") [Memo Akten](https://en.wikipedia.org/wiki/Memo_Akten "Memo Akten") created an [online CO2 calculator](http://cryptoart.wtf/) to criticize the unreasonable [carbon footprint](https://en.wikipedia.org/wiki/Carbon_footprint "Carbon footprint") for Ethereum-based NFT transactions.[\[46\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-48) In early 2021, a German conceptual artist auctioned a single transparent pixel for 1 [Ether](https://en.wikipedia.org/wiki/Ethereum "Ethereum") and thereby emitting 125 kg of CO2.[\[47\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-49) An analysis of data from an NFT market found that the average NFT art transaction used 340 kWh of electricity and had a carbon footprint of 211 kg of carbon dioxide, equivalent to around a month's worth of electricity consumption for a resident in the EU, driving for 1,000 km, or flying for 2 hours.[\[48\]](https://en.wikipedia.org/wiki/Non-fungible_token#cite_note-50)

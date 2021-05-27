@@ -1,2 +1,0 @@
-- [[Mutual Information]]
-- [[Info/Entropy]]

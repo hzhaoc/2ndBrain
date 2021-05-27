@@ -1,5 +1,0 @@
-- [[CPU]]
-- [[Crystal Oscillator]]
-- [[Instruction Register]]
-- [[Integrated Circuits]]
-- [[Semiconductor]]
