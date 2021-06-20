@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "f853a37a7ff21936",
+        "id": "b701d95496e05b41",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Computer Science/Computer Architecture/ILP - Out-of-Order EXE w Reorder Buffer.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ALU",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 380
+    "width": 268
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computer Science/Computer Architecture/ILP - Out-of-Order EXE w Reorder Buffer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f853a37a7ff21936",
+  "active": "b701d95496e05b41",
   "lastOpenFiles": [
-    "Computer Science/Computer Architecture/Instruction.md",
-    "Computer Science/Computer Architecture/Instruction Scheduling.md",
-    "Computer Science/Computer Architecture/Untitled.md",
-    "Computer Science/Computer Architecture/ILP.md",
-    "Computer Science/Computer Architecture/Architect Fundamental - Power & Energy.md",
-    "Computer Science/Computer Architecture/_Index/Computer Architecture.md",
-    "Computer Science/Computer Architecture/Predicate.md",
-    "Computer Science/Computer Architecture/Instruction scheduling.md",
-    "Computer Science/Computer Architecture/Architect Fundamental.md",
-    "Computer Science/Computer Architecture/ILP - Pipelining - Branch.md"
+    "Computer Science/Computer Architecture/ILP - Out-of-Order EXE w Reorder Buffer.md",
+    "Computer Science/Computer Architecture/ILP - Mem Ordering.md",
+    "Computer Science/Computer Architecture/Virtual Memory.md",
+    "Computer Science/Computer Architecture/Cache.md",
+    "Computer Science/Computer Architecture/ILP - VLIW (only compiler).md",
+    "Computer Science/Computer Architecture/ILP - Compiler.md",
+    "Computer Science/Computer Architecture/ILP - Out-of-Order EXE.md",
+    "Computer Science/Computer Architecture/ILP - Ctrl Deps. Branch Predicate.md",
+    "Computer Science/Computer Architecture/ILP - Ctrl Deps. Branch Predict.md",
+    "Computer Science/Computer Architecture/ILP - Pipeline.md"
   ]
 }

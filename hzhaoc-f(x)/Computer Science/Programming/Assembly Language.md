@@ -1,4 +1,4 @@
-In computer programming, **assembly language** (or **assembler language**), is any low-level programming language in which there is a very strong correspondence between the instructions in the language and the architecture's [[Machine Code]] [[Instruction#Instruction|instructions]].
+In computer programming, **assembly language** (or **assembler language**), is any low-level programming language in which there is a very strong correspondence between the instructions in the language and the architecture's [[Machine Code]] [[Inst Set Arch.#Instruction|instructions]].
 
 Assembly code is converted into executable machine code by a utility program referred to as an _assembler_. The conversion process is referred to as _assembly_, as in _assembling_ the source code. Assembly language usually has one statement per machine instruction (1:1), but comments and statements that are assembler directives and symbolic labels of program and memory locations are often also supported.
 

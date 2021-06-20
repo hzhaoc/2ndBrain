@@ -4,26 +4,29 @@
 -  Arbitrate
 	- translate virtual address to physical address, validate
 # Hardware support of MM
-- MMU
-	- (memory management unit): translate virtual to physical addr, or report faults (illegal, permission, not present), by page table/segments
-- Registers
-	- pointers to page table or base, limit size, number of segments
-- Cache
-	- (**TLB**) translation lookaside buffer, part of virtual-physical translations (faster than page table/segments)
-- Translation
-	- hardware actually performs translation.
-- Copy-on-write (‘COW’)
-	- when creating a new process from copying an original process, new process pointer points to original page (static portion, write-protected). When a write request issued, copy only the part that will be written (updated part)
-	- Copy-on-write (COW), sometimes referred to as implicit sharing or shadowing. **the copy operation is deferred until the first write**. By sharing resources in this way, it is possible to significantly reduce the resource consumption of unmodified copies, while adding a small overhead to resource-modifying operations.
-- Checkpointing
-- Debugging, migration (same mechanism as checkpointing)
+### MMU
+(memory management unit): translate virtual to physical addr, or report faults (illegal, permission, not present), by page table/segments
+### Registers
+pointers to page table or base, limit size, number of segments
+### Cache 
+#### **TLB**
+part of virtual-physical translations (faster than page table/segments). A **translation lookaside buffer (TLB)** is a memory cache that is used to reduce the time taken to access a user memory location. It is a part of the chip's memory-management unit (MMU). The TLB *stores the recent translations of virtual memory to physical memory* and can be called an address-translation cache. A TLB may reside between the CPU and the CPU cache, between CPU cache and the main memory or between the different levels of the multi-level cache. The majority of desktop, laptop, and server processors include one or more TLBs in the memory-management hardware, and it is nearly always present in any processor that utilizes paged or segmented virtual memory. See also [[Virtual Memory#TLB|TLB]] under computer architecture.
+### Translation
+hardware actually performs translation.
+### Copy-on-write (‘COW’)
+- when creating a new process from copying an original process, new process pointer points to original page (static portion, write-protected). When a write request issued, copy only the part that will be written (updated part)
+- Copy-on-write (COW), sometimes referred to as implicit sharing or shadowing. **the copy operation is deferred until the first write**. By sharing resources in this way, it is possible to significantly reduce the resource consumption of unmodified copies, while adding a small overhead to resource-modifying operations.
+### Checkpointing
+### Debugging, migration (same mechanism as checkpointing)
+
 # Type
 ## Page-based
 - Allocate
 	- fixed-size page in virtual memory -> page frames in physical memory
 - Arbitrate
 	- page tables
-### Page tables
+### Page table
+suggested another reading of [[Virtual Memory#Page Table|page table]] under computer architecture.
 - Virtual memory pages and physical memory page frames are the **same size**.
 - VPN (Virtual Page Number / first address in virtual page) is the index/offset in the page table, it directs to the PFN (page frame number, first addr in physical page frame) through page table. Offsets followed by VPN are also passed to offsets followed by PFN, resulting in a complete virtual to physical data mapping through page table. Page table also has a valid bit field, indicating mapping is valid or invalid (return fault). When a reclaimed page/data goes back to DRAM/physical mem from disk, new mapping is built. Physical address may be different from before.
 - When a variable is declared, a virtual memory address is allocated. When it’s initialized, OS first time touch the corresponding physical address

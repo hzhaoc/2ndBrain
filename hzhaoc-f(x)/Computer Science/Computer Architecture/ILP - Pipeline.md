@@ -1,5 +1,5 @@
 ## Intro
-Pipelining is the most common [[ILP]] technique.
+Pipelining is the most common [[ILP - ILP & Deps.]] technique.
 ## Instruction Cycle
 Pipeline is a sequence of multiple stages to process instructions from start to end. A typical basic five-stage pipeline in a processor is:
 
@@ -25,32 +25,20 @@ The decoding process allows the CPU to determine what instruction is to be perfo
 ### Execute Stage
 The CPU sends the decoded instruction as a set of control signals to the corresponding computer components. If the instruction involves arithmetic or logic, the ALU is utilized. This is the only stage of the instruction cycle that is useful from the perspective of the end-user. Everything else is overhead required to make the execute step happen.
 
-## Dependencies
-Dependencies are due to program, not pipeline
-
-### control dependencies
-- Inst: **Branch/Jump**
-About 20% of insts are Branch/Jump.
-- Inst: **Taken insts** (actually go to jump inst) are 50% of Branch/Jump insts.
-
-### data dependencies
-- **True** (some can be **hazards**)
-	- RAW (read after write / flow)
-- **False**
-	- WAW (write after write / write over)
-	- WAR (write after read / anti)
-
-## Hazards handling
+## Hazards handling (caused by program [[ILP - ILP & Deps.#Dependencies|dependencies]])
 - **stall**
 If there an instruction has to wait at a pipeline stage, all the instructions ahead of it proceed through the pipeline, all the instructions behind it are also stalled. This is called a delay in the pipeline. The pipeline ahead of the delay will not have instructions to execute as the pipeline empties and the instructions behind the delay will be stalled. Pipeline stall makes $CPI\geq1$.
+Stall is for (actually only **true** because false ones are removed by reg renaming) **data dependencies**.
 ![[pipeline-jump.png]]
 
 - **flush**
 Branches can cause bubbles when the incorrect branch is taken. When this happens all the incorrect instructions that were fetched must be flushed from the pipeline and replaced with NOPs. Then the correct instructions must be fetched.
+Flush is for **program dependencies**.
 ![[pipeline-jump.png]]
 
 - **forward**
-Forward is for example, at the first half of one cycle, the instruction return value is forwarded to input of following instruction for it to read correct value in the second half of the cycle, thus RAW is avoided.
+Forward is for example, at the first half of one cycle, the instruction return value is forwarded to input of following instruction for it to read correct value in the second half of the cycle, thus RAW is avoided. Forward is either forward from 1st half of cycle to 2nd half of cycle or forward from 1st cycle to next cycle.
+Forward is for **data dependencies.**
 
 - Summary
 	- For program control dependencies hazards, FLUSH.
@@ -65,5 +53,5 @@ Assume ideal CPI = 1. Pipeline fill, stall, flush, increase CPI.
 
 ## How many stages?
 When stages are increased in a pipeline: 
-- less work at each stage, so clock rates increase, at the same time CPI will be higher due to more hazards from deep stages, overall leading to, according to [[Architect Fundamental - Power & Energy|CPU dynamic power]] formula, higher CPU active power
-- according to [[Architect Fundamental - Performance#Benchmark performance metrics|CPU time]]/execution time formula, CPU time decreased or increased where there will be an optimal performance for some number of stages. If only *performance* is considered, 30~40-stage pipeline is usually optimal; if *performance* and *power & energy* are considered, usually 10 - 15 stages are optimal.
+- less work at each stage, so clock rates increase, at the same time CPI will be higher due to more hazards from deep stages, overall leading to, according to [[Arch. - Power & Energy|CPU dynamic power]] formula, higher CPU active power
+- according to [[Arch. - Performance#Benchmark performance metrics|CPU time]]/execution time formula, CPU time decreased or increased where there will be an optimal performance for some number of stages. If only *performance* is considered, 30~40-stage pipeline is usually optimal; if *performance* and *power & energy* are considered, usually 10 - 15 stages are optimal.

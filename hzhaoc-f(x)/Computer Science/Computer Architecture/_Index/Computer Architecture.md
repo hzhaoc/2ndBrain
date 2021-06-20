@@ -1,10 +1,20 @@
 Index note - Computer Architecture:
--	[[Architect Fundamental - Performance]]: how to measure CPU performance?
--	[[ILP - Pipelining]]: multi-stage structure to process insts
--	[[ILP - Pipelining - Branch]]: manage control hazard in inst pipeline
--	[[Predicate]]: manage control hazard in inst pipeline
--	[[ILP]]:  instruction level parallelism. Ideal IPC of a program.
--	[[Architect Fundamental - Power & Energy]]
--	[[Instruction]]
--	[[Architect Fundamental - Cost]]
--	[[Architect Fundamental]]
+-	[[Arch. - Bg & Trend]]
+-	[[Arch. - Cost]]
+-	[[Arch. - Performance]]
+-	[[Arch. - Power & Energy]]
+-	[[ILP - ILP & Deps.]]
+-	[[ILP - Pipeline]]
+-	[[ILP - Out-of-Order EXE]]
+-	[[ILP - Ctrl Deps. Branch Predict]]
+-	[[ILP - Ctrl Deps. Branch Predicate]]
+-	[[ILP - Out-of-Order EXE w Reorder Buffer]]
+-	[[ILP - Mem Ordering]]
+-   [[ILP - Compiler]]
+-   [[ILP - VLIW (only compiler)]]
+-	[[Inst Set Arch.]]
+-	[[Mem Hier. Desi. - tech, cache opt.]]
+-	[[Mem Hier. Desi. - vtr. mem & vtr mache.]]
+-	[[TLP]]
+-	[[Cache]]
+-	[[Virtual Memory]]
