@@ -6,11 +6,10 @@
       {
         "id": "ed47f38efe4ae67b",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CS/Algo/Spectral Clustering.md",
+            "file": "CS/Big Data/Hadoop.md",
             "mode": "preview"
           }
         }
@@ -40,7 +39,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ""
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
               }
             }
           }
@@ -48,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 172
+    "width": 312
   },
   "right": {
     "id": "29711112515b0e0b",
@@ -64,7 +68,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS/Algo/Spectral Clustering.md"
+                "file": "CS/Big Data/Hadoop.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -75,15 +86,16 @@
     "width": 300,
     "collapsed": true
   },
+  "active": "ed47f38efe4ae67b",
   "lastOpenFiles": [
-    "CS/Algo/Spectral Clustering.md",
-    "CS/Algo/PageRank.md",
-    "CS/Algo/File Compression.md",
-    "CS/Big Data/Spark.md",
     "CS/Big Data/Hadoop.md",
+    "CS/Big Data/Spark.md",
     "CS/Big Data/Health/Phenotyping.md",
-    "CS/Hardware & Comp Arch/Untitled.md",
     "CS/Big Data/Health/Medical Ontology.md",
+    "CS/Algo/Spectral Clustering.md",
+    "CS/Algo/File Compression.md",
+    "CS/Algo/PageRank.md",
+    "CS/Hardware & Comp Arch/Untitled.md",
     "CS/Algo/Untitled.md",
     "CS/Big Data/Health/Untitled.md"
   ]

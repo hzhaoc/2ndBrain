@@ -7,11 +7,8 @@
         "id": "b701d95496e05b41",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Computer Science/Computer Architecture/ILP - Out-of-Order EXE w Reorder Buffer.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -52,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268
+    "width": 370
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Computer Architecture/ILP - Out-of-Order EXE w Reorder Buffer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +84,15 @@
   },
   "active": "b701d95496e05b41",
   "lastOpenFiles": [
-    "Computer Science/Computer Architecture/ILP - Out-of-Order EXE w Reorder Buffer.md",
-    "Computer Science/Computer Architecture/ILP - Mem Ordering.md",
+    "Computer Science/Computer Architecture/Arch. - Bg & Trend.md",
+    "Computer Science/Algorithm/Dynamic Programming.md",
     "Computer Science/Computer Architecture/Virtual Memory.md",
+    "Computer Science/Computer Architecture/TLP.md",
+    "Computer Science/Computer Architecture/Mem Hier. Desi. - vtr. mem, vtr mach..md",
+    "Computer Science/Computer Architecture/Mem Hier. Desi. - mem tech, cache opt..md",
     "Computer Science/Computer Architecture/Cache.md",
-    "Computer Science/Computer Architecture/ILP - VLIW (only compiler).md",
-    "Computer Science/Computer Architecture/ILP - Compiler.md",
-    "Computer Science/Computer Architecture/ILP - Out-of-Order EXE.md",
-    "Computer Science/Computer Architecture/ILP - Ctrl Deps. Branch Predicate.md",
-    "Computer Science/Computer Architecture/ILP - Ctrl Deps. Branch Predict.md",
-    "Computer Science/Computer Architecture/ILP - Pipeline.md"
+    "Physics/Electromagnetism/Capacitance.md",
+    "Physics/Electromagnetism/Carrier.md",
+    "Physics/Electromagnetism/Charge.md"
   ]
 }

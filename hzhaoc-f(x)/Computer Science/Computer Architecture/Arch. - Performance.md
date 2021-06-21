@@ -22,7 +22,7 @@ Only consistent and reliable measure of performance is** execution time of real 
 	-	clock freq:   **processor design**, circuit design, transistor physics.
 
 #### Amdahl's Law:
-$$Overall Speedup = \frac{1}{(1- P) + \frac{P}{S}}$$
+$$Overall \  Speedup = \frac{1}{(1- P) + \frac{P}{S}}$$
 where
 $P$ is part of the program execution **time** (not instructions) that is enhanced
 $S$ the speedup for that part

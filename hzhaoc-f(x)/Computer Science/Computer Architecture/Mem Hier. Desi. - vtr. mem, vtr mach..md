@@ -19,7 +19,7 @@ TLB uses principal of locality which states that if mem accesses have locality, 
 Current production Operating Systems have thousands of bugs. This stimulates a protection model with a much smaller OS code base than full OS, such as virtual machines.
 
 ## Protection via Virtual Machine
-We are interested in VMs that provide a complete system-level environment at the binary ISA level. When the [[Inst Set Arch.#Instruction Set Architecture|ISA]] presented by VM and the underlying hardware match, such VMs are called _(operating) system virtual machines_. With VMs, multiple OSes share the hardware resources. 
+We are interested in VMs that provide a complete system-level environment at the binary ISA level. When the [[Instruction Set Arch.#Instruction Set Architecture|ISA]] presented by VM and the underlying hardware match, such VMs are called _(operating) system virtual machines_. With VMs, multiple OSes share the hardware resources. 
 
 The software that supports VMs is called a _virtual machine monitor_ or _hypervisor_; the VMM is the heart of the virtual machine technology. The underlying platform is called the _host_, and its resources are shared among _guest VMs_. The VMM determines how to map virtual resources to physical resources:  A physical resource may be time-shared, partitioned, or even emulated in software. The VMM is **much smaller** than a traditional full OS; the isolation portion of a VMM is perhaps only 10,000 lines of code. 
 
@@ -40,7 +40,7 @@ To be in charge, the VMM must be at a higher privilege level than guest VMs, whi
 - at least two processor modes: system & user
 - a privileged subset of insts that is available only in the system mode, resulting in a **trap** if executed in user mode where kernel/system OS take over. All system resources must be controlled only by these privileged insts.
 
-## [[Inst Set Arch.#Instruction Set Architecture|ISA]] support for Virtual Machines
+## [[Instruction Set Arch.#Instruction Set Architecture|ISA]] support for Virtual Machines
 An architecture that allows the VM to execute directly on the hardware is called **virtualizable**, such as IBM 370. RISC-V has support for virtualizations. As said above, when guest VM tries to execute privileged insts, it traps and VMM intercept it and support a virtual version of such information as the guest OS expects.
 
 ## Impact of Virtual Machines on Virtual Mem & I/O

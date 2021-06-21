@@ -1,4 +1,4 @@
-This topic discusses some of the techniques used by compilers to achieve greater ILP. Improving **[[ILP - Out-of-Order EXE|inst sche]]** and reducing **inst #** are the basic goals of compiler ILP.
+This topic discusses some of the techniques used by [[Computer Science/Compiler/_Index/Compiler|compilers]] to achieve greater ILP. Improving **[[ILP - Out-of-Order EXE|inst sche]]** and reducing **inst #** are the basic goals of compiler ILP.
 
 ##### Tree Height Reduction
 Tree height refers to the dependence chains in a list of instructions. Tree height reduction is regrouping the calculations in an instruction list to reduce the dependencies. **This method only works for calculations that are associative.** See below ADD example:

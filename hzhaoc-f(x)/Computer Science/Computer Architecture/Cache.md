@@ -93,3 +93,7 @@ modern caches are mostly this type (2021)
 write to cache and immediately write to mem
 - ##### write-back
 only write to mem when the block is being replaced. this is **most popular** (2021). usually paired with write-allocate.
+
+#### access overlap between Cache & [[Virtual Memory#TLB|TLB]]
+cache and TLB access can be overlapped if cache is virtually indexed, not physically.
+![[VIPTCache.png|600]]

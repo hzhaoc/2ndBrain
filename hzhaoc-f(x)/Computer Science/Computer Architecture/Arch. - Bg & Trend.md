@@ -42,7 +42,7 @@ thread-level parallelism exploits either data-level or task-level parallelism in
 request-level parallelism exploits parallelism among largely decoupled tasks specified by the programmer or the operating system.
 
 ## Define Computer Architecture
-- ##### [[Inst Set Arch.#Instruction Set Architecture|ISA]]: myopic view of computer architecture
+- ##### [[Instruction Set Arch.#Instruction Set Architecture|ISA]]: myopic view of computer architecture
 - ##### Genuine computer architecture
 software function needs demand computer architecture
 

@@ -5,7 +5,7 @@
 - Traditionally, designers focused on optimizing **average memory access time (AMAT)**, determined by **cache access time**, **miss rate**,  **miss  penalty**; More recently, **Power** is a major consideration. In some PMD cases, caches can account for 25% to 50% of the total power consumption.
 
 ### Cache
-Check [[Cache]] note also for specifically concepts of cache structure.
+> Check [[Cache]] note also for specifically concepts of cache structure.
 
 In cache, data move by **block** (multiple words). Each block includes a **tag** to indicate which memory address it corresponds to. A key design decision is where blocks can be placed in a cache. The most popular scheme is *set associative*, where a set is a group of blocks in the cache. A block is first mapped onto a set, and then the block can be placed anywhere within that set. Finding a block consists of first mapping the block address to the set, and then searching the set to find the block. The set is chosen by the address of the data:
 $$(block \ address)\ MOD \ (Number \ of \ sets \ in \ cache)$$
