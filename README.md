@@ -1,5 +1,5 @@
 # 2ndBrain
- my MOC style knowledge system powered by [obsidian](https://obsidian.md/)
+ personal knowledge build
 
 - **hzhaoc-f(x)**: knowledge notes
 - **hzhaoc-y**: other notes
