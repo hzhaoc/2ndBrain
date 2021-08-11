@@ -1,4 +1,4 @@
-This topic discusses some of the techniques used by [[Computer Science/Compiler/_Index/Compiler|compilers]] to achieve greater ILP. Improving **[[ILP - Out-of-Order EXE|inst sche]]** and reducing **inst #** are the basic goals of compiler ILP.
+This topic discusses some of the techniques used by [[Computer Science/Compiler/_Index/Compiler|compilers]] to achieve greater ILP. Improving **[[ILP - OOO EXE|inst sche]]** and reducing **inst #** are the basic goals of compiler ILP.
 
 ##### Tree Height Reduction
 Tree height refers to the dependence chains in a list of instructions. Tree height reduction is regrouping the calculations in an instruction list to reduce the dependencies. **This method only works for calculations that are associative.** See below ADD example:
@@ -20,7 +20,7 @@ For one example, notice ADD1 does not have deps, and can be moved to the first S
 For another example, see below, rename R1 to R10 in insts between 4th and 6th. It doesn't affect the program correctness. Then insts can be reordered to hide LW (load word) latency.
 ![[compiler inst sche 2.png|600]]
 ##### Inst Sche in If-Conversion
-1. Do [[ILP - Ctrl Deps. Branch Predicate]] to avoid branch prediction
+1. Do [[ILP - Ctrl Deps. - Branch Predicate]] to avoid branch prediction
 2. Now you have stable inst flow, do inst sche as said above
 
 ##### Loop Unrolling + Inst Sche.

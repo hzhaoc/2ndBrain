@@ -7,6 +7,6 @@
 - [[Deep Learning]]
 - [[Computer Hardware]]
 - [[Machine Learning]]
-- [[Network Security]]
+- [[Computer Network]]
 - [[Operating System]]
 - [[Programming]]

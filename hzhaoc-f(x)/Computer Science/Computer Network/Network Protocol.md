@@ -1,0 +1,17 @@
+# UDP
+In computer networking, the **User Datagram Protocol (UDP)** is one of the core members of the Internet protocol suite. With UDP, computer applications can send messages, in this case referred to as datagrams, to other hosts on an Internet Protocol (IP) network. Prior communications are not required in order to set up communication channels or data paths.
+
+UDP uses a simple **connectionless communication model with a minimum of protocol mechanisms**. UDP provides **checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram**. It has **no handshaking dialogues**, and thus exposes the user's program to any unreliability of the underlying network; there is **no guarantee of delivery, ordering, or duplicate protection**. If error-correction facilities are needed at the network interface level, an application may use Transmission Control Protocol (TCP) or Stream Control Transmission Protocol (SCTP) which are designed for this purpose.
+
+UDP is suitable for purposes where error checking and correction are either not necessary or are performed in the application; UDP avoids the overhead of such processing in the protocol stack. Time-sensitive applications often use UDP because dropping packets is preferable to waiting for packets delayed due to retransmission, which may not be an option in a real-time system.
+
+### UDP vs TCP
+ | TCP | UDP
+------------ | ------------ | ------------
+ Reliability | TCP manages message acknowledgment, retransmission and timeouts. Multiple attempts to deliver the message are made. If data gets lost along the way, data will be re-sent. In TCP, there's either no missing data, or, in case of multiple timeouts, the connection is dropped. | When a UDP message is sent, it cannot be known if it will reach its destination; it could get lost along the way. There is no concept of acknowledgment, retransmission, or timeout.
+ Order | If two messages are sent over a connection in sequence, the first message will reach the receiving application first. When data segments arrive in the wrong order, TCP buffers the out-of-order data until all data can be properly re-ordered and delivered to the application. | If two messages are sent to the same recipient, the order in which they arrive cannot be guaranteed.
+ Weight | TCP requires three packets to set up a socket connection, before any user data can be sent. TCP handles reliability and [congestion control](https://en.wikipedia.org/wiki/Congestion_control "Congestion control"). | There is no ordering of messages, no tracking connections, etc. It is a very simple transport layer designed on top of IP.
+ Data Format | Data is read as a byte stream, no distinguishing indications are transmitted to signal message (segment) boundaries. | Packets are sent individually and are checked for integrity on arrival. Packets have definite boundaries which are honored upon receipt; a read operation at the receiver socket will yield an entire message as it was originally sent.
+ Congestion Protocol | yes | UDP itself does not avoid congestion. Congestion control measures must be implemented at the application level or in the network.
+ Broadcast | no | being connectionless, UDP can broadcast - sent packets can be addressed to be receivable by all devices on the subnet.
+ multicast | no | a multicast mode of operation is supported whereby a single datagram packet can be automatically routed without duplication to a group of subscribers.

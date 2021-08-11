@@ -62,7 +62,7 @@ IBM is still the gold standard of virtual machine technology as of 2017!
 #### Autonomous Inst Fetch Units
 Many processors with out-of-order execution and even some with simply deep pipelines decouple the instruction fetch and sometimes initial decode, using a separate inst fetch unit. Typically inst fetch unit accesses the **inst cache** to fetch an entire block before decoding it into individual insts. In addition, the inst fetch unit may prefetch blocks into L1 cache. This reduce total miss penalty. Many processors also include data prefetching, which may increase data cache miss rate, while decreasing miss penalty.
 #### Speculation and Mem Access
-One major advanced pipeline technique is speculation, whereby an inst is tentatively executed before the processor knows whether it is really needed. Such technique relies on [[ILP - Ctrl Deps. Branch Predict|Branch Prediction]] which if incorrect, the speculated instructions are flushed. There are two main issues with speculation:
+One major advanced pipeline technique is speculation, whereby an inst is tentatively executed before the processor knows whether it is really needed. Such technique relies on [[ILP - Ctrl Deps. - Branch Predict|Branch Prediction]] which if incorrect, the speculated instructions are flushed. There are two main issues with speculation:
 1. Protection. Correctly speculated insts may generate exception of protection.
 2. Because a speculative processor may generate accesses to both inst and data caches and not use results of those accesses, cache miss rates may raise.
 #### Special Inst Caches

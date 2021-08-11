@@ -14,7 +14,7 @@ The fetch step is the same for each instruction:
 4.  A fraction of a second later, the CPU copies the data from the MDR to the [current instruction register (CIR)](https://en.wikipedia.org/wiki/Instruction_register "Instruction register") for instruction decoding
 5.  The PC is incremented so that it points to the next instruction. This step prepares the CPU for the next cycle.
 
-The control unit fetches the instruction's address from the [[Memory & Storage|Memory Unit]]
+The control unit fetches the instruction's address from the [[Storage Hierarchy|Memory Unit]]
 
 ### Decode Stage
 The decoding process allows the CPU to determine what instruction is to be performed so that the CPU can tell how many operands it needs to fetch in order to perform the instruction. The opcode fetched from the memory is decoded for the next steps and moved to the appropriate registers. The decoding is done by the [[CPU]]'s [Control Unit](https://en.wikipedia.org/wiki/Control_Unit "Control Unit").

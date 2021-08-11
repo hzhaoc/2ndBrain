@@ -2,4 +2,4 @@
 - [[Quantum Mechanics]]
 - [[Theromodynamics]]
 - [[Crystal]]
-- [[Principals]]
+- [[Physics/Principals]]

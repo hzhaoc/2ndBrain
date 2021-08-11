@@ -22,7 +22,7 @@ About 20% of insts are Branch/Jump.
 - Personally think no need to be considered here for ILP (see below Reg Renaming example to remove WAW).
 
 ### Remove false dependencies (WAR, WAW)
-##### Approach 1: Duplicate [[Memory & Storage#Register|register]] values
+##### Approach 1: Duplicate [[Storage Hierarchy#Register|register]] values
 Write to same register with multiple values by some order. Needs hardware support.
 
 ##### Approach 2: Register renaming

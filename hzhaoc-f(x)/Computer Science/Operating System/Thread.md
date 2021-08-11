@@ -1,9 +1,9 @@
 # Thread vs. Process
-Multithreads in a same process share same virtual to physical address mappings. (**code, data, heap, stack, files**). Each thread has its own stack pointer, registers, program counter, thread ID, etc. (execution context).
+Multithreads in a same process share same virtual to physical address mappings. (**code, data, heap, stack, files**). Each thread has its own **Execution Context** such as stack pointer, [[Storage Hierarchy#Register|register]], program counter, thread ID, etc.
 ![[process_n_thread.png]]
 # Basic
 ## Benefits
-1. Parallelization. Speed up dealing with input.
+1. Parallelization. Speed up dealing with same input.
 2. Specialization. Hot cache dealing with special tasks.
 3. Requires less memory than multi-processes by sharing same addresses. Lower memory management. 
 4. Cheaper IPC than multi-processes.
@@ -11,9 +11,32 @@ Multithreads in a same process share same virtual to physical address mappings. 
 ![[multithreads_ctx_switch.png]]
 5\. Multithreads on multi-CPUs: Run application concurrently like below
 ![[multithreads_on_multicpu.png]]
+
+# Thread Mechanism
+unlike process, thread share address spaces (virtual to physical translation for data, code, etc.)
+
 ## Adaptive mutex
 If a user level thread T1 on a CPU C1 requests a mutex that’s locked by another user level thread T2 on another CPU C2, if the critical section for T2 to execute is short, then OS spins T1 to kernel level thread on C2. If critical section is long, then T1 wait on mutex queue as usual. This is called **adaptive mutex**.
-## kernel-level data structure
+## Thread Data Structure
+- PCB work divided into 
+	- user level thread:
+		- thread ID
+		- user level registers
+		- thread stack
+	- kernel level thread:
+		- stack
+		- kernel level register
+	- address space is shared so that kernel and user threads can relate to or recognize each other
+
+![[thread data structure.png|500]]
+
+at scale, address space visible to both kernel and user are divided into 
+- hard process state: address space shared among threads
+- light weight state: thread-dependent address space
+![[thread data structure at scale.png|500]]
+### kernel-level data structure
+- kernel level data structure "beyond multithreading: multithreading the SunOS thread"
+![[kernel thread data structure.png|500]]
 - Process
 	- List of kernel-level thread
 	- virtual address space

@@ -48,7 +48,7 @@ Simultaneous multiprocessing. Scheduling on multiple CPUs
 	- Schedule similar tasks on same CPU to hit hot cache
 - Non-uniform memory access NUMA
 
-## SMT
+## [[Thread#Hyper-threading|SMT]]
 Simultaneous multithreading. Scheduling for hyperthreading
 
 Co-schedule compute-bound and memory-bound threads

@@ -1,2 +1,5 @@
-- [[Binary Encoding]]
 - [[Dynamic Programming]]
+- [[Graph Search]]
+- [[Divide and Conquer]]
+- [[Greedy]]
+- [[Computer Science/Algorithm/Principals]]

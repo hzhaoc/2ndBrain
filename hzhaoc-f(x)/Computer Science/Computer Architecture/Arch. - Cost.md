@@ -11,7 +11,7 @@ basic process of silicon manufacture is unchanged: a wafer is tested and chopped
 
 - $$Cost \ of \ die = \ \frac{cost \ of \ wafer}{dies \ per \ wafer \ X \ die \ yield}$$
 
-- $$$dies \ per \ wafer \ = \ \frac{\pi*(wafer \ diameter/2)^2}{die \ area}-\frac{\pi * wafer \ diameter}{\sqrt{x*die \ area}}$$
+- $$dies \ per \ wafer \ = \ \frac{\pi*(wafer \ diameter/2)^2}{die \ area}-\frac{\pi * wafer \ diameter}{\sqrt{x*die \ area}}$$
 
 In the third formula, first term is ratio of wafer area to die area, second compensates for "square peg in a round hole" approximately.
 

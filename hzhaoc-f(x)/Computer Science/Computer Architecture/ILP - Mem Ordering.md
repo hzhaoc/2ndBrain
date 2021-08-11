@@ -8,7 +8,7 @@ This topic will tell you a method for handling mem (RAW/store-then-load) deps: t
 ### Load Store Queue
 LSQ helps some loads (insts) get store values with same addr directly from this queue without going to mem. 
 
-Write to Mem occur at [[ILP - Out-of-Order EXE w Reorder Buffer#ROB Commit|Commit]]. The LSQ has following fields:
+Write to Mem occur at [[ILP - OOO EXE w Reorder Buffer#ROB Commit|Commit]]. The LSQ has following fields:
 - A bit indicating load or store
 - mem address of the load or store
 - data to be stored (or load?) in mem

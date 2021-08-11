@@ -1,11 +1,3 @@
-## Spark vs. Hadoop
-- Hadoop pros:
-Hadoop is based on **acyclic data flow** (input->mapper->reducer->output) from stable storage to stable storage.
-
-- Hadoop cons:
-It is inefficient for applications that repeatedly **reuse** a working set of data 
-![[hadoopcons.png]]
-
 ## Spark
 ### overview
 At a high level, every Spark application consists of a driver program that runs the user’s main function and executes various parallel operations on a 'cluster' manager. The main abstraction Spark provides is a resilient distributed dataset (RDD), which is a collection of elements partitioned across the nodes of the cluster that can be operated on in parallel. 
@@ -15,12 +7,13 @@ A second abstraction in Spark is shared variables that can be used in parallel o
 See more details [here at apache spark documentation](https://spark.apache.org/docs/latest/rdd-programming-guide.html#overview)
 
 ### spark work flow
-If the program is iterative (no inter-dependencies in each iteration), put input data to distributed memories across machines; if the program is interactive, put input data in memory, so interaction in each iteration can be done fast.
-![[sparkflow.png]]
+- If the program is iterative (no inter-dependencies in each iteration), put input data to **distributed memories across machines**; 
+- if the program is interactive, put input data in **memory**, so interaction in each iteration can be done fast.
+![[sparkflow.png|550]]
 
 ### Resilient Distributed Datasets
 RDD provides an interface with coarse-grained data transformations (balance between fault-tolerance, transformation tracking, and data manipulation granularity): `map`,`join`,`distinct`,`union`,`intersection`,`substract`...
-![[spark_ops.png]]
+![[spark_ops.png|600]]
 Efficient fault recovery using **lineage** that tracks/logs RDD transformations.
 
 ### RDD operations
@@ -36,7 +29,7 @@ e.g. `filter`,`map`
 driver program (main thread) sends RDD to worker threads managed by a cluster manager. 
 e.g. `count`,`collect`,`reduce`...
 
-### more on RDD cluster mode
+### Spark system
 ![[spark_clustermode.png]]
 Spark applications run as independent sets of processes on a cluster, coordinated by the SparkContext object in your main program (called the driver program).
 
@@ -47,10 +40,22 @@ There are several useful things to note about this architecture:
 1. Each application gets its own executor processes, which stay up for the duration of the whole application and run tasks in multiple threads. This has the benefit of isolating applications from each other, on both the scheduling side (each driver schedules its own tasks) and executor side (tasks from different applications run in different JVMs However, it also means that data cannot be shared across different Spark applications (instances of SparkContext without writing it to an external storage system.
 2. Spark is agnostic to the underlying cluster manager. As long as it can acquire executor processes, and these communicate with each other, it is relatively easy to run it even on a cluster manager that also supports other applications (e.g. Mesos/YARN).
 3. The driver program must listen for and accept incoming connections from its executors throughout its lifetime (e.g., see spark.driver.port in the network config section). As such, the driver program must be network addressable from the worker nodes.
-4. Because the driver schedules tasks on the cluster, it should be run close to the worker nodes, preferably on the same local area network. **If you’d like to send requests to the cluster remotely, it’s better to open a RPC (remote procedure call) to the driver and have it submit operations from nearby than to run a driver far away from the worker nodes.**
+4. Because the driver schedules tasks on the cluster, it should be run close to the worker nodes, preferably on the same local area network. **If you’d like to send requests to the cluster remotely, it’s better to open a [[IPC#RPC|RPC]] (remote procedure call) to the driver and have it submit operations from nearby than to run a driver far away from the worker nodes.**
 
 See more details for [cluster mode](https://spark.apache.org/docs/latest/cluster-overview.html#components)
 
-## Stack
-![[sparkstack.png]]
+### Spark stack
+![[sparkstack.png|550]]
 - Yarn / Mesos: cluster manager (manage workers (threads other than main thread(driver program)))
+
+### Spark vs. Hadoop
+- Hadoop pros:
+Hadoop is based on **acyclic data flow** (input->mapper->reducer->output) from stable storage to stable storage.
+
+- Hadoop cons:
+It is inefficient for applications that **repeatedly reuse** a working set of data 
+![[hadoopcons.png|600]]
+
+> Spark is a Hadoop enhancement to MapReduce. The primary difference between Spark and MapReduce is that Spark processes and retains data in **memory** for subsequent steps, whereas MapReduce processes data on disk. As a result, for smaller workloads, Spark’s data processing speeds are up to 100x faster than MapReduce.
+> 
+> Furthermore, as opposed to the two-stage execution process in MapReduce, Spark creates a Directed Acyclic Graph (**DAG**) to schedule tasks and the orchestration of nodes across the Hadoop cluster. This task-tracking process enables **fault tolerance**, which reapplies recorded operations to data from a previous state.

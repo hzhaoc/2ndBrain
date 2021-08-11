@@ -1,11 +1,11 @@
 # Concepts
 -  allocate
 	-  allocate physical memory, replacement contents in physical memory with disks
--  Arbitrate
+-  arbitrate
 	- translate virtual address to physical address, validate
 # Hardware support of MM
 ### MMU
-(memory management unit): translate virtual to physical addr, or report faults (illegal, permission, not present), by page table/segments
+memory management unit. **support page tables**. **translate virtual to physical addr, or report faults (illegal, permission, not present), by page table/segments**
 ### Registers
 pointers to page table or base, limit size, number of segments
 ### Cache 

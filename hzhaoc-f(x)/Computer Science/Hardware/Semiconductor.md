@@ -73,7 +73,7 @@ N区与P区结合时，载流子发生扩散运动，从浓度高的区域往浓
 
 ## 应用
 - 二极管（Diode）：单项导电、控压
-- 三极管（Bipolar Junction Transistor）：放大电流、控制电流
+- 三极管（Bipolar Junction [[Transistor]]）：放大电流、控制电流
 
 ## Moore's LAW
 Every 18-24 months, 2 times of transistors fit on the same chip area.

@@ -1,18 +1,7 @@
-list
-====
-
-tuple
-=====
-
-queue
-=====
-
+##### list
+##### tuple
+##### queue
 First in first out, used in BFS
-
-stack
-=====
-
+##### stack
 Last in first out, used in DFS
-
-heap
-====
+##### heap

@@ -11,3 +11,5 @@ An operating system is a layer of system software that resides between applicati
 - [[Thread]]
 - [[Virtualization]]
 - [[Linux]]
+- [[DFS]]
+- [[IPC]]

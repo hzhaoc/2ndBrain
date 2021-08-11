@@ -5,8 +5,8 @@ An instruction can be variable or fixed length, for RISC-V it is 32-bit fixed le
 graph TD; 
 	instruction-->operator; 
 	instruction-->operand;
-	operand-->register; 
-	operand-->memory_address;
+	operand-->register_store_value; 
+	operand-->register_store_mem_addr;
 ```
 
 # Instruction Set Architecture
@@ -14,8 +14,8 @@ In [[Computer Science]], an **instruction set architecture** (**ISA**) is an **a
 
 In general, an ISA defines 
 -	supported data types
--	[[Memory & Storage#Instruction Register|register]]
--	hardware support for managing [[Memory & Storage#RAM DRAM|main memory]]
+-	[[Storage Hierarchy#Instruction Register|register]]
+-	hardware support for managing [[Storage Hierarchy#RAM DRAM|main memory]]
 -	fundamental features (such as the [memory consistency](https://en.wikipedia.org/wiki/Memory_consistency "Memory consistency"), addressing modes, [virtual memory](https://en.wikipedia.org/wiki/Virtual_memory "Virtual memory"))
 -	input/output model of a family of implementations of the ISA.
 
