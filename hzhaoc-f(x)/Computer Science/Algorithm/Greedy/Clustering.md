@@ -1,5 +1,5 @@
-### Problem: Minimum Max Space in K-Cluster Graph
-find max space between two clusters in a K-cluster graph. this is a [[Computer Science/Algorithm/Principals#Greedy|greedy]] algorithm
+### Minimum Max Space in K-Cluster Graph
+find max space between two clusters in a K-cluster graph. this is a [[Approaches#Greedy|greedy]] algorithm
 
 ```python
 def MaxSpaceClustering(graph, K):

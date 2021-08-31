@@ -1,16 +1,17 @@
 # Principal
-See also [[Computer Science/Algorithm/Principals#Dynamic Programming]]
--   Identify a problem's **optimal structure** in relation to its **optimal substructures**.
+See also [[Approaches#Dynamic Programming]]
+-   Identify a problem's **optimal structure** in relation to its **optimal substructures**, as well as **base cases**
 -   Use this relation to breakdown problem and build optimal structure bottom-up
 
-# problem: max weight of independent set in graph
+# Examples
+### max weight of independent set in graph
 -   Denote Gi = first ith vertices of graph G, A\[i\] = value of max Independent Set of Gi
 -   Initialize A\[0\] = 0, A\[1\] = w1
 -   Loop i = 2, 3, ..., n:
 
-> A\[i\] = max{a\[i-1\], a\[i-2\] + wi
+> A\[i\] = max{a\[i-1\], a\[i-2\] + wi}
 
-### code implementation
+##### code
 ```python
 def MaxWeightIS(weights):
 	"""max weight of independant sets from vertices (0-indexed array of vertice weights)"""
@@ -30,8 +31,14 @@ def MaxWeightIS(weights):
 	return w, A
 ```
 
-# problem: knapsack problem
-### code
+### knapsack problem
+- Input: $n$ items. Each has a positive value $v_i$,  and a size  $w_i$. Also, knapsack capacity $W$.
+- Goal: subset $S \in {1,2,...,n}$ that maximizes $\sum_{i\in S}v_i$
+- Cons.: $\sum_{i\in S}w_i\leq{W}$ 
+##### algorithm 1
+- assumes $w_i$ and $W$ are integers. 
+- runtime complexity: $O(nW)$ (poly-time if $W$ are polynomial to $n$)
+##### code
 ```python
 def Knapsack(vertices, capacity):
 	"""Knapsack problem, vertices: array of (weight, size), 0-indexed"""
@@ -69,78 +76,58 @@ def Knapsack_fast(vertices, capacity):
 	return A[capacity]
 ```
 
-# problem: Sequence alignment
+##### Algorithm 2
+- assumes $v_i$ are integers 
+- run time $O(n^2*max(V_i))$ (poly-time if $max(V_i)$ are polynomial to $n$)
+### Sequence alignment
 to add
 
-# problem: Optimal Binary Search Tree
+### Optimal Binary Search Tree
 See [[Optimal Binary Search Tree]].
 - Time Complexity: $O(n^3)$
 - Space Complexity: $O(n^2)$
 
-# problem: shortest paths
-### Bellman Ford
-Either compute a shortest cycle-free path $s-v$ or output a negative cycle, for all paths starting from $s$
-##### Pseudo code & analysis
-- Let $L_{i,v}$ = minimum length of a $s-v$ path with edge number $n\leq{i}$. $l_{i, j}$ = edge length of $e(i, j)$ Cycles allowed. And $+ \infty$ if not such path exists
-	- For $i = 1, 2, ..., n-1$: ($n$ if one (**only one!**) negative cycle existence needs to be checked) 
-		- For $v = 1, 2, ..., n$:
-			- $$L_{i,v}=min\left\{ \begin{matrix} L_{\left( i - 1 \right),\ v} \\ \min_{(w,v) \in E}\left\{ L_{\left( i - 1 \right),w} + l_{w,v} \right\} \\  \end{matrix} \right.\ $$
-			- meanwhile, keep track of Predecessor pointers $B[i, v]$ = 2nd-last vertex in the shortest path. this will track shortest paths. note that $B[0, v] = null$.
-			- if $L_{i, v}=L_{i-1, v}$ ($v$ is target vertex). This means optimal path is already found for path $s-v$. Can exit early. 
-			- **Why the equation stands? Because subpath of a shortest path is in itself a shortest path**
-			- **With negative cycles in graph: use DFS to check for a cycle of predecessor pointers at every iteration**.
+### Shortest-path in graph
+- [[Shortest Path#Bellman Ford Algorithm]] $O(n^2m)$
+- [[Shortest Path#Floyd-Warshall Algorithm]] $O(n^3)$
+- [[Shortest Path#Johnson's Algorithm]] $O(mnlogn)$
 
-> Why only one more iteration is sufficient to **one** capture negative cycles in shortest path? 
-> - If there's **1** negative-cycle in shortest s-v, one of the vertex in the path Must be visited Twice, number of edges for the budget will increase by one. n-1 => n.
-> - Extension: I think **K** additional iterations on top of original 0 -> n-1 will be able to capture K negative cycles in the shortest path s-v, since one negative cycle makes one vertex visited one more time, increasing edge number budget by 1.
+For sparse graph $m=O(n)$ -> Johnson is best
+For dense graph $m=O(n^2)$ -> Floyd-Warshall is best. Additionally Floyd-Warshall is better for distributed computing.
 
-- Time Complexity is $O(mn)$ without negative edges.
+### Traveling Salesman Tour
+find minimum total edge cost of a Cycle that visits each vertex in graph Exactly once. This is an [[NP Complete]] problem.
+- time: $O(n^22^n)$
+##### code
+```python
+def TSP(cities, n):
+	"""
+	minimum Traveling Salesman Tour. 
+	An NP-Complete problem.
+	time complexity: O(n^2*2^n)
+	"""
+	s, A, A_pre = 0, {((), 0): 0}, {} # start vertex: 0
+	for size in range(1, n): # additional optimal structure subset size
+		A_pre, A = copy.deepcopy(A), {}
+		for subset in combinations(range(1, n), size): # traverse subset (cycle of vertices) combinations of some size
+			theset = tuple(sorted(subset))
+			for j in subset: # end vertex: j
+				A[(theset, j)] = float("inf")
+				for k in (0,) + subset: # like Bellman-Ford, k is the 2nd-last vertex to the last vertex j
+					if k != j:
+						A[(theset, j)] = min(A_pre.get((tuple(sorted([v for v in subset if v != j])), k), float("inf")) + distance(cities, k, j), A[(theset, j)])
+				print(size, subset, j)
 
-> Why it is not the intuitive answer $O(n^2)$?
-> total work is $O(n*\sum_{v\in{V}}{\text{in-degree}(v)})$ = $O(n*m)$
+	theset, premin = tuple(range(1, n)), float("inf")
+	for i in range(1, n):
+		_tmp = A[theset, i] + distance(cities, i, 0)
+		if _tmp < premin: 
+			premin = _tmp
+		print(i, _tmp)
+	return premin
 
-- Space Complexity: $O(n^2)$
-	- Space optimization: 
-		- only need $A[i-1, v]$ to compute $A[i, v]$ for any $v$ in vertexes. $O(n)$
-		- still need $O(n^2)$ for $B[i, v]$ **?**
-- Modifications toward a routing protocol: 
-	- Examples: RIP, RIP2.
-	- Switch from source-driven to destination-driven.
-		- reverse algorithm and edge direction.
-		- each $v$ maintains shortest path distance to destination $t$, plus the first edge/hop.
-	- Handling asynchrony: switch from 'pull-based' to 'push-based' 
-		- as soon as $A[i,v] < A[i-1, v]$, $v$ notifies (push) all of its neighbors for updates
-		- algorithm guaranteed to converge eventually, **assuming no negative cycles**. Reason: updates decrease shortest distance
-	- Handling failures -- when an edge is broken
-		- change: each $v$ maintains shortest path distance to destination $t$, plus the ENTIRE PATH. Cons: more space required.
-
-### Floyd-Warshall
-compute all pairs of shortest paths (APSP) and report relevant negative cycles if any
--   Time complexity: (n: vertex #;  m: edge #;)
-	- $O(n^2m)$ for Bellman Ford
-	- $O(nmlogn)$ for Dijkstra
-	- $O(n^3)$ for Floyd-Warshall
-- Works with negative edges
-- better than {n * Bellman Fords} in dense graph ($n<m$)
-- with nonnegative edge costs, competitive with {n * Dijkstra's} in  dense graphs
-- important special case: transitive closure of a binary relation
-
-### Johnson's Algorithm
-compute all pairs of shortest paths (APSP)
--   1 invocation of Bellman Ford + n invocation of Dijkstra: O(mnlogn)
--   Weight each vertex, adjust edge length to E(u, v) = E + Pu -- Pv
--   Weighting vertex, updating edge lengths: (add a new vertex, 1 Bellmon Ford), can still report a negative cycle in original graph
--   N Dijkstra
--   5: For each pair u, v in G, return the shortest path distance d(u, v) = d'(u, v) -- pu + pv
--   Running time: O(1) in step 1, O(mn) in step 2, O(m) in step 3, O(nmlogn) in step 4, O(n\^2) in step 5, total: O(nmlogn).
--   Pro: **handle negative edges, and much better than FloydWarshall, BellmanFord in sparse graphs**
-
-# Summary: Running time for APSP:
-- Bellman Ford: $O(n^2m)$
-- Dijkstra: $O(nmlogm)$ (negative edges not allowed)
-- Floyd Warshall: $O(n^3)$
-- Johnson's: $O(mnlogn)$
-
-For sparse graph -> Johnson is best
-For dense graph -> Floyd-Warshall is best
-
+def distance(cities, k, j):
+	x1, y1 = cities[k]
+	x2, y2 = cities[j]
+	return ((x1-x2)**2 + (y1-y2)**2)**0.5
+```

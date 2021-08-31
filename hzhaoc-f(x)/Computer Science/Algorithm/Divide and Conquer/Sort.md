@@ -2,7 +2,7 @@
 idea is Divide and Conquer. (recursively split an array and merge two sub-arrays into one ordered array)
 - **time: O(nlogn)**. (logn of divides * n of conquers per divide)
 - **space: O(nlogn)**. (logn of divides, n length of array per divide)
-- this is a [[Computer Science/Algorithm/Principals#Divide and Conquer|divide and conquer]] algorithm
+- this is a [[Approaches#Divide and Conquer|divide and conquer]] algorithm
 ```python
 def MergeSort(arr):
 	"""
@@ -42,7 +42,7 @@ def MergeSort(arr):
 idea is Divide and Conquer. recursively split an array and partition an subarray by choosing a pivot element and ordering the array around the pivot so this particular pivot element is ordered in the correct position in the subarray. the choosing of the pivot element can be random, first, median, etc.
 - **time: O(nlogn)**. (logn of divides * n of conquers per divide)
 - **space: O(1)**. modify in place
-- this is a [[Computer Science/Algorithm/Principals#Divide and Conquer|divide and conquer]] algorithm
+- this is a [[Approaches#Divide and Conquer|divide and conquer]] algorithm
 ```python
 def QuickSort(arr, l, r, pivot='random'):
 	"""

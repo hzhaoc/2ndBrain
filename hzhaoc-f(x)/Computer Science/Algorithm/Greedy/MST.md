@@ -2,7 +2,7 @@
 A minimum spanning tree (MST) or minimum weight spanning tree is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
 
 ### Prim's Algorithm
-this is a [[Computer Science/Algorithm/Principals#Greedy|greedy]] algorithm
+this is a [[Approaches#Greedy|greedy]] algorithm
 ```python
 def MST_Prim(graph, start):
 	"""
@@ -38,7 +38,7 @@ def MST_Prim(graph, start):
 ```
 
 ### Kruskal's Algorithm
-this is a [[Computer Science/Algorithm/Principals#Greedy|greedy]] algorithm
+this is a [[Approaches#Greedy|greedy]] algorithm
 ```python
 def MST_Kruskal(graph):
 	"""

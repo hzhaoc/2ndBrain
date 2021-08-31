@@ -1,5 +1,7 @@
 Below is my work that implements a Matrix class which does matrix multiplication using a basic Strassen algorithm, a divide and conquer approach in a recursion flavor. See the `mult()` method.
 
+Run time: $O(n^{\log_2^{7}})\approx{O(n^{2.8})}$
+
 ```python
 class BaseMatrix:
 	"""

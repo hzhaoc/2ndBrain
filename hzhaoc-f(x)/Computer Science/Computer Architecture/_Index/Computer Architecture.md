@@ -1,5 +1,5 @@
 Index note - Computer Architecture:
--	[[Arch. - Bg & Trend]]
+-	[[Bg, Trend, Cost, Power, Energy, Perform]]
 -	[[Arch. - Cost]]
 -	[[Arch. - Performance]]
 -	[[Arch. - Power & Energy]]

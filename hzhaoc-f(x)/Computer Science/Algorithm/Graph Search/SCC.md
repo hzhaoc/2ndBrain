@@ -6,7 +6,7 @@ In computer science, a topological sort or topological ordering of a directed gr
 
 Mathematically, in graph A,  for each edge u->v, order(u) < order(v) 
 
-Statement "**a directed graph has a topological ordering**" is sufficient and necessary condition to the statement "**a directed graph is acyclic**"
+Statement "**a directed graph has a topological ordering**" is sufficient and necessary for statement "**a directed graph is acyclic**"
 
 ### Kosaraju’s algorithm
 First notice a few things:
@@ -24,22 +24,14 @@ The answer in Kosaraju's Algorithm is: we need a **topological order of the grap
 ##### Code Implementation
 ```python
 class Graph:
-	def __init__(self, adjacencyList=None):
-		if not adjacencyList:
-			self.G = defaultdict(list)
-			self.G_rev = defaultdict(list)
-		else:
-			self.G = adjacencyList
+	def __init__(self, vertices): # input is list of vertex indexes
+		self.V = vertices
+		self.G = {v: set() for v in vertices}
+		self.G_rev = {v: set() for v in vertices}
 
 	def addEdge(self, u, v):
-		self.G[u].append(v)
-		self.G_rev[v].append(u)
-		return
-
-	# add edge with length
-	def addEdgeLen(self, u, v, l):
-		self.G[u].append((v, l)) 
-		return
+		self.G[u].add(v)
+		self.G_rev[v].add(u)
 
 	def ComputeSCC(self):
 		"""
@@ -49,44 +41,30 @@ class Graph:
 		: self.finish: list of vertices in SCC-level topological order / finish time order
 		: self.leaders: list of leaders, a vertice in self.finish can find its leader/SCC group in same position in self.leaders 
 		"""
-		lth = max(self.G.keys())
-		print('graph nodes number', lth)
 		# DFS-LOOP 1
-		self.visited = [False] * (lth + 1)
-		self.finish = []
-		self.t = 0
-		for v in reversed(range(1, lth + 1)): # this order does not matter, its random
-			if not self.visited[v]:
+		self.visited, self.finish = set(), []
+		for v in self.V[::-1]: # this order does not matter, its random
+			if v != 0 and v not in self.visited:
 				self._DFSf_recur_2(v)
 		# DFS-LOOP 2
-		self.visited = [False] * (lth + 1)
-		self.leaders = []
-		for v in reversed(self.finish):
-			if not self.visited[v]:
-				leader = v
-				self._DFS_recur_2(v, leader)
-
-	def SortedSCCSize(self, top):
-		leaders = self.leaders
-		count = Counter(leaders)
-		res = count.most_common()[:top]
-		return res
+		self.visited, self.leaders = set(), dict()
+		for leader in self.finish[::-1]:
+			if leader not in self.visited:
+				self._DFS_recur_2(leader, leader)
 
 	def _DFS_recur_2(self, s, leader):
-		self.visited[s] = True
+		self.visited.add(s)
 		for v in self.G[s]:
-			if not self.visited[v]:
+			if v not in self.visited:
 				self._DFS_recur_2(v, leader)
-		self.leaders.append(leader)
-		return
+		self.leaders[s] = leader
 
-	def _DFSf_recur_2(self, s):  # second DFS_recur method with finish times 
-		self.visited[s] = True
+	def _DFSf_recur_2(self, s): # second DFS_recur method with finish times 
+		self.visited.add(s)
 		for v in self.G_rev[s]: # not necessarily reverse graph, original graph is ok, just opposite order of finish times / SCC topological order
-			if not self.visited[v]:
+			if v not in self.visited:
 				self._DFSf_recur_2(v)
 		self.finish.append(s)
-		return
 ```
 
 ### Uses

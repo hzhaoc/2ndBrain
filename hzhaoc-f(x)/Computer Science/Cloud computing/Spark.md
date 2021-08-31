@@ -59,3 +59,6 @@ It is inefficient for applications that **repeatedly reuse** a working set of da
 > Spark is a Hadoop enhancement to MapReduce. The primary difference between Spark and MapReduce is that Spark processes and retains data in **memory** for subsequent steps, whereas MapReduce processes data on disk. As a result, for smaller workloads, Spark’s data processing speeds are up to 100x faster than MapReduce.
 > 
 > Furthermore, as opposed to the two-stage execution process in MapReduce, Spark creates a Directed Acyclic Graph (**DAG**) to schedule tasks and the orchestration of nodes across the Hadoop cluster. This task-tracking process enables **fault tolerance**, which reapplies recorded operations to data from a previous state.
+
+### Spark example
+see [COVID-CXR](https://github.com/hzhaoc/COVID-CXR) as my example research which uses Spark to preprocess data. The Preprocess code is in `./src/main/100 Image Meta.ipynb`and  `./src/main/110 Image Data.ipynb`

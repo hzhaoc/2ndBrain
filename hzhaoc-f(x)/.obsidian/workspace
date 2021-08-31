@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Science/Cloud computing/Spark.md",
+            "file": "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "RISC",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319
+    "width": 322
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Cloud computing/Spark.md",
+                "file": "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "f5409f7a83b6c52a",
   "lastOpenFiles": [
-    "Computer Science/Cloud computing/Spark.md",
-    "Computer Science/Cloud computing/Hadoop.md",
-    "Computer Science/Cloud computing/_Index/Cloud Computing.md",
-    "_img/hadoopcons.png",
-    "Computer Science/Operating System/IPC.md",
-    "Computer Science/Computer Architecture/Mem Hier. Desi. - storage fault tolerance.md",
-    "Computer Science/Computer Architecture/Mem Hier. Desi. - cache, mem, storage.md",
-    "Computer Science/Computer Architecture/Mem Hier. Desi. - fault tolerance.md",
-    "Computer Science/Algorithm/Dynamic Programming.md",
-    "Computer Science/Algorithm/Principals.md"
+    "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
+    "Computer Science/Embedded Systems & Compilers/Embedded Processor Market.md",
+    "Computer Science/Embedded Systems & Compilers/VLIW Compiler.md",
+    "Computer Science/Computer Architecture/Bg, Trend, Cost, Power, Energy, Perform.md",
+    "Computer Science/Computer Architecture/ILP - VLIW (compiler).md",
+    "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
+    "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
+    "Computer Science/Embedded Systems & Compilers/Processors.md",
+    "Computer Science/Hardware/CPU.md",
+    "Computer Science/Embedded Systems & Compilers/Untitled.md"
   ]
 }

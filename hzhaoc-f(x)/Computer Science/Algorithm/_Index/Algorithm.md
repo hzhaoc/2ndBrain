@@ -2,4 +2,5 @@
 - [[Graph Search]]
 - [[Divide and Conquer]]
 - [[Greedy]]
-- [[Computer Science/Algorithm/Principals]]
+- [[Approaches]]
+- [[NP Complete]]
