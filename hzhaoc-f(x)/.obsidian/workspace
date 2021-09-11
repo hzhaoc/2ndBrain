@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f5409f7a83b6c52a",
+        "id": "c1322bab30f95e87",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
+            "file": "Computer Science/Embedded Systems & Compilers/Registers & Memory.md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "RISC",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322
+    "width": 378
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
+                "file": "Computer Science/Embedded Systems & Compilers/Registers & Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f5409f7a83b6c52a",
+  "active": "c1322bab30f95e87",
   "lastOpenFiles": [
+    "Computer Science/Embedded Systems & Compilers/Registers & Memory.md",
+    "Computer Science/Embedded Systems & Compilers/Datapath in Microarchitecture.md",
     "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
+    "Computer Science/Embedded Systems & Compilers/Embedded System.md",
     "Computer Science/Embedded Systems & Compilers/Embedded Processor Market.md",
+    "Computer Science/Embedded Systems & Compilers/VLIW ISA.md",
     "Computer Science/Embedded Systems & Compilers/VLIW Compiler.md",
-    "Computer Science/Computer Architecture/Bg, Trend, Cost, Power, Energy, Perform.md",
-    "Computer Science/Computer Architecture/ILP - VLIW (compiler).md",
     "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
-    "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
-    "Computer Science/Embedded Systems & Compilers/Processors.md",
-    "Computer Science/Hardware/CPU.md",
-    "Computer Science/Embedded Systems & Compilers/Untitled.md"
+    "Computer Science/Embedded Systems & Compilers/Untitled.md",
+    "Computer Science/Embedded Systems & Compilers/ISA.md"
   ]
 }

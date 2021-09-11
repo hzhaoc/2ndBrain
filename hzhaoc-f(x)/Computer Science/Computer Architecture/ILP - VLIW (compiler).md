@@ -29,7 +29,7 @@
 	
 > Load responses from a memory hierarchy which includes CPU caches and DRAM do not have a deterministic delay.
 
-- [[Embedded Processor Market#categories by functions|DSP]] Processor
+- [[Embedded System#categories by functions|DSP]] Processor
 	- digital signal processing
 	- regular loops, lots of iters
 	- excellent performance

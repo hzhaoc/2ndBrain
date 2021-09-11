@@ -2,10 +2,10 @@
 key take-away:  caches managed by hardware itself are fast, but not sufficient, therefore we need algorithms for more efficient slow-fast memory transfers.
 
 ### notation
-- Q: number of slow-fast memory transfers
-- L: block transfer size
-- Z: fast memory size
-- n: number of elements in slow memory to operate on
+- **Q**: number of slow-fast memory transfers
+- **L**: block transfer size
+- **Z**: fast memory size
+- **n**: number of elements in slow memory to operate on
 
 ## A First Basic Model
 To find a locality aware algorithm we need a machine model - will be using a variation on the von Neumann model.  
@@ -22,13 +22,6 @@ Rules:
 Costs: The model has two costs associated with it:
 1. Work. W(n) == the # of computation operations. (How many operations will the processor have to perform?)
 2. **Data transfers, Q(n;Z;L) == # of L-sized slow-fast transfers **(loads and stores). The number of transfers is dependent upon the size of the cache and block size. This will referred to as **Q** and be called the I/O Complexity. 
-	- Example: Given an array of size **n**, sum its elements. The processor needs to do at least n-1 additions, W(n) ≥ n-1 additions = Ω(n). For memory transfers → you need to make at least one pass through the data. This can be considered the lower bound on transfers: Q(n,Z,L) ≥ ceiling(n/L) transfers = Ω(n/L). (The ceiling takes into account any partial transfer if n/L is not an integer). Note the equation does NOT depend on Z, the size of the cache - because you are touching each data only once, so the size of the fast memory does not matter. Reduction does not reuse data -- this is BAD!
-
-- Q for sorting algorithm
-$Q(n;Z;L) = \Omega(\frac{(n/L)\log(n/L)}{\log(Z/L)})$. **Why?**
-
-- Q for matrix multiplication
-$Q(n;Z;L) = \Omega{(n^3/(L\sqrt{Z}))}$. **Why?**
 
 ## Algorithm Design goals
 - **Work optimality**.  two-level memory model should do asymptotic work as the best serial/sequential RAM model
@@ -71,4 +64,60 @@ The intuition from *energy & time efficiency analysis and actual testing*[^1] is
 Check the actual paper for more details.
 ![[io model balance gap.png|700]] ![[io model balance gap on actual systems.png|600]]
 
+## IO Avoiding Algorithm
+Continue analysis for several common IO algorithms:
+##### $Q$ (transfers) for merge sort
+$$Q(n;Z;L) = \Omega(\frac{(n/L)\log(n/L)}{\log(Z/L)})$$ 
+> analysis:
+> - Phase 1: for each chunk of fast memory of total $n/Z$ chunks, do sort, takes $ZlogZ$ comparisons, and $Z/L$ transfers. 
+>   - total transfer: $n/L$. 
+>   - total comparison: $nlogZ$
+> - Phase 2: two-way merging. for each sorted chunk of size $Z$ in slow memory, read them into fast mem, and merge two chunks into a bigger sorted chunk, then output. this has $log(n/Z)$ steps. At each step $k$ there's $(n/z)*(1/2)^k$ number of $z^k$ size chunks, 
+>   - total transfers: $(n/z)*(1/2)^k*(z^{(k+1)}/L) = 2\frac{n}{L}\log\frac{n}{Z}=O(\frac{n}{L}\log\frac{n}{Z})$ 
+>      - (in each merge, you need read two chunks from slow to fast and write back same size.). 
+>   - total comparisons: $n\log\frac{n}{Z}=O(n\log\frac{n}{Z})$
+>   
+> Summing up:
+>  - transfer: $O(\frac{n}{L}\log\frac{n}{Z})$ a bit higher than lower bound
+>  - comparison: $O(nlogZ)$
+> 
+> If we do K-way merging that fully utilizes fast mem size $Z$, then we can reach theoretical lower bound:
+> - transfers: $\Omega(\frac{n}{L}\log_{\frac{Z}{L}}{\frac{n}{L}})$
+> - comparison: $O(nlogn)$
+
+##### Q for binary search
+$$Q(n;Z;L) = \Omega{\frac{\log n}{\log L}}$$
+> according to information theory, an array with $n$ binary bits contains $\log n$ information. For each $L$ transfer, you can learn $\log L$ information.
+> 
+> van emeda boas data layout in fast memory achieves this lower bound: (DATA STRUCTURE MATTERS.)
+> - recursively partition a binary search tree by half (equal height) into subtrees, align divided subtrees linearly in consecutive memory space (each base subtree must fit into a cache line of course)
+> - ![[binary search lower io bound from van emeda boas.png|600]]
+
+##### Q for matrix multiplication
+$$Q(n;Z;L) = \Omega{(n^3/(L\sqrt{Z}))}$$ 
+- proof 1: 
+![[matrix multiply block transfer.png|600]]
+- proof 2 from a different divide and conquer algorithm:
+	- operations: $O(2n^3)$
+	- transfers: $Q(n;Z;L) = \Omega{(n^3/(L\sqrt{Z}))}$
+![[matrix multiply divide and conquer.png|600]]
+
+## about Cache oblivious..
+the term Cache oblivious refers to an IO algorithm whose $Q$ is irrelevant to cache size $Z$. for example, sum of $n$ size array takes $Q=O(n/L)$. for a counter example, matrix multiplication in block transfer is cache ware.
+
+##### LRU-OPT Competitiveness Lemma
+the lemma[^2] says $$Q_{LRU}(n;Z;L)\leq 2Q_{OPT}(n;\frac{n}{2};L)$$ It means that number of transfers for a LRU-based cache can be asymptotically close to number of transfers for an cache with optimal replacement policy but only half of size. 
+
+##### Corollary (Regularity Condition)
+$Q_{OPT}(n;Z;L)=O(Q_{OPT}(n;2*Z;L))$. For example, previously we see for matrix multiplication, $Q(n;Z;L) = \Omega{(n^3/(L\sqrt{Z}))}$, when $Z$ doubles, there's only constant factor change of optimal number of transfer.
+
+Once the $Q$ obeys this condition, then the lemma stays.
+
+##### tall-cache assumption
+an interesting design assumption of cache where its height (number of cache lines) shall be larger than its width (number of words in a line). this will be helpful when algorithm is related to matrix block transfer. for example, a $b*b$ block transfer requires $Z\geq b*b$
+
+most actual caches, probably except for TLB, are indeed tall.
+
+
 [^1]: Jee Whan Choi, et al, A roofline model of energy, 2012.05
+[^2]: Frigo et al, (FOCS, 1999)
