@@ -23,6 +23,6 @@ Sub-topics include:
 In this model, the idea is that there is not one serial RAM, but many serial RAMs connected by a network. In this model, each serial RAM’s memory is private to the other RAMs; consequently, the processors must coordinate and communicate by sending and receiving messages.
 
 Sub-topics include:
--  **The basic algorithmic model** Intro to the Message Passing Interface, a practical programming model 
+-  **[[Distributed Memory - Basic Model]]** Intro to the Message Passing Interface, a practical programming model 
 -  **Reasoning about the effects of network topology** Dense linear algebra 
 -  **Sorting** Sparse graph algorithms Graph partitioning
