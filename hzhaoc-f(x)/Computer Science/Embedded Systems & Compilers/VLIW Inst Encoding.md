@@ -21,7 +21,7 @@ ISA serves as a layer between software and hardware. So what to expose to and wh
 
 ##### fixed-overhead encoding
 - used in first gen VLIW
-- prepending mask bits to tell how to map to a expanded full inst buffer
+- prepending mask bits to tell how to map to an expanded full inst buffer
 - also compute next PC 
 - advantages:
 	- simple

@@ -6,17 +6,53 @@
   "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"Computer Science\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Electrical Engineering\"",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:Physics",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:Mathematics",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:Informatics",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    }
+  ],
   "collapse-display": true,
-  "showArrow": false,
-  "textFadeMultiplier": -3,
-  "nodeSizeMultiplier": 1.59373219373219,
-  "lineSizeMultiplier": 2.93390313390313,
+  "showArrow": true,
+  "textFadeMultiplier": -2.1,
+  "nodeSizeMultiplier": 1.66910112359551,
+  "lineSizeMultiplier": 1.31123595505618,
   "collapse-forces": true,
-  "centerStrength": 0.447293447293447,
-  "repelStrength": 13.1623931623932,
-  "linkStrength": 1,
-  "linkDistance": 377,
-  "scale": 0.2292013594174945,
-  "close": false
+  "centerStrength": 0.460674157303371,
+  "repelStrength": 12.3595505617978,
+  "linkStrength": 0,
+  "linkDistance": 500,
+  "scale": 0.2292013594174962,
+  "close": true
 }

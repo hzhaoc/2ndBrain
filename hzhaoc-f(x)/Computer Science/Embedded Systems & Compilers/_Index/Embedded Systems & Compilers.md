@@ -4,10 +4,19 @@ this entry knowledge is mainly from OMSCS CS 6291 Fall 2021, including papers an
 	-  Compilers: Principles, Techniques, and Tools
 
 # Note List
-- [[VLIW Compiler]]
+### part 1
+-  [[VLIW Compiler]]
 - [[Registers & Memory]]
-- [[VLIW ISA]]
+- [[VLIW Inst Encoding]]
 - [[Datapath]]
+- [[VLIW Branch, Speculation, Predication]]
+### part 2
+- [[Compiler - Frontend]]
+- [[Compiler - Intermediary - CFG]]
+- [[Compiler - Backend - Liveness]]
+- [[Compiler - Backend - Reg Alloc]]
+- [[Compiler - Backend - Reg Alloc Opt.]]
+- [[Compiler - Backend - Reg Encoding]]
 
 # Some Background
 ### [[Bg, Trend, Cost, Power, Energy, Perform#Intro|RISC]] vs CISC
@@ -34,7 +43,7 @@ add 4[r1] <- r2
 ```
 
 # Embedded System Market
-## categories by functions
+## Categories by functions
 as of **2010**
 - **computational micros**
 	- general purpose processors, such as CPUs of mainframes, PCs, workstations, servers, high-end portable devices. Most RISC or CISC based engines belong to this
@@ -49,7 +58,7 @@ as of **2010**
 	- unlike DSP, it's usually programmed in assembly language, hard to compile. 
 	- unlike DSP, it does not have high ILP, will not likely use VLIW structure in future
 
-## categories by market
+## Categories by market
 as of **2010**
 - imaging processing, consumer market
 	- printers, audio, video, camera, home entertainment

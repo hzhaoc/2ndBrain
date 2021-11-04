@@ -4,3 +4,4 @@
 - [[Greedy]]
 - [[Approaches]]
 - [[NP Complete]]
+- [[Complexity of Master Theorem]]

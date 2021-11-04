@@ -10,7 +10,7 @@ By definition, a binary decision problem is in the set of Non-deterministic Poly
 
 ### NP-hard
 A problem is NP-hard iff:
-- any other problem in NP can be poly-time reduced to this problem. In other words, all other problems can be solved by first solving this problem plus polynomial transfer, or this problem is as hard as any other NP problem.
+- any other problem in NP can be poly-time "reduced" (it may actually increase program runtime complexity) to this problem. In other words, all other problems can be solved by first solving this problem plus polynomial transfer, or this problem is as hard as any other NP problem.
 
 Note: halting problem is NP-hard, but halting problem is NOT in NP.
 

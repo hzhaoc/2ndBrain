@@ -15,7 +15,7 @@ In VLIW there is no bypassing. There are specific instructions for moving data f
 ##### Clustering
 Traditionally, there were large multiported register files, but scalability was hindered by this method. In VLIW intercluster communication is necessary. There is also a memory interface unit. Most communication will be within the cluster, much less communication intercluster, and very little memory communication.    
 ![[register clustering.png|600]]
-
+![[vliw clusters.gif]]
 **Two Types of Clustering **
 - Architecturally Invisible 
 	- appears as one large register file to the compiler.
@@ -28,8 +28,8 @@ Traditionally, there were large multiported register files, but scalability was 
 	- the ISA must include a way to specify operations assigned to each cluster.
 	- The copies between clusters are implicit copy or explicit copy
 	- Directly copy registers to registers in a different cluster 
-		- Implicit copy: operations may r/w operands in nonlocal registers. But complicated for scheduling and scalability issues. 
-		- Explicit copy: only a special operation can access a remote register under compiler control and must be inserted in a special place in the code. This may increase instruction issue pressure and code size.  
+		- **Implicit copy**: operations may r/w operands in nonlocal registers. But complicated for scheduling and scalability issues. 
+		- **Explicit copy**: only a special operation can access a remote register under compiler control and must be inserted in a special place in the code. This may increase instruction issue pressure and code size.  
 	- Implementation Constraints 
 		- Implicit and explicit copy operations increase critical path 
 		- Dividing a single architecture into two cluster costs 15 - 20% extra cycles, four clusters cost 25 - 30%. The reason for the increase is the explicit copies and increased requests on memory. If we have 15 - 20% increased clock speed and bypass logic, clustered configuration becomes the better choice. The increased clock frequency is modest, so this is a **viable choice** for VLIW.   

@@ -10,13 +10,14 @@ Sub-topics include:
 - **Basic models** Efficiency metrics, including “emerging” metrics like energy and power 
 - **I/O-aware algorithms** Cache-oblivious algorithms
 
-### Unit 2: The work-span or dynamic multithreading model
+### Unit 2: [[Work-Span Model]]
 In this model, the idea is that there are multiple processors connected to the main memory. Since they can all “see” the same memory, the processors can coordinate and communicate via reads and writes to that “shared” memory.
 
 Sub-topics include:
-- **Intro to the basic algorithmic model** Intro to OpenMP, a practical programming model 
-- **Comparison-based sorting algorithms** Scans and linked list algorithms 
-- **Tree algorithms** Graph algorithms, e.g., breadth-first search
+- Intro to the basic algorithmic model, [[Work-Span Intro to OpenMP|Intro to OpenMP]], a practical programming model 
+- [[Work-Span Comparison-Based Sorting]], [[Work-Span Scans & List Ranking]]
+- [[Work-Span Scans & List Ranking#Scan on Postorder tree|Tree Scan-based computation]], Graph algorithms, e.g., [[Work-Span BFS|Breadth First Search]]
+- [[CUDA Parallelism]]
 
 ### Unit 3: Distributed memory or network models
 In this model, the idea is that there is not one serial RAM, but many serial RAMs connected by a network. In this model, each serial RAM’s memory is private to the other RAMs; consequently, the processors must coordinate and communicate by sending and receiving messages.
@@ -24,4 +25,4 @@ In this model, the idea is that there is not one serial RAM, but many serial RAM
 Sub-topics include:
 -  **The basic algorithmic model** Intro to the Message Passing Interface, a practical programming model 
 -  **Reasoning about the effects of network topology** Dense linear algebra 
--  **Sorting** Sparse graph algorithms ** Graph partitioning
+-  **Sorting** Sparse graph algorithms Graph partitioning

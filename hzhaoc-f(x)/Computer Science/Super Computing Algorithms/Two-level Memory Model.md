@@ -66,14 +66,14 @@ Check the actual paper for more details.
 
 ## IO Avoiding Algorithm
 Continue analysis for several common IO algorithms:
-##### $Q$ (transfers) for merge sort
+##### Q (transfers) for merge sort
 $$Q(n;Z;L) = \Omega(\frac{(n/L)\log(n/L)}{\log(Z/L)})$$ 
 > analysis:
 > - Phase 1: for each chunk of fast memory of total $n/Z$ chunks, do sort, takes $ZlogZ$ comparisons, and $Z/L$ transfers. 
 >   - total transfer: $n/L$. 
 >   - total comparison: $nlogZ$
 > - Phase 2: two-way merging. for each sorted chunk of size $Z$ in slow memory, read them into fast mem, and merge two chunks into a bigger sorted chunk, then output. this has $log(n/Z)$ steps. At each step $k$ there's $(n/z)*(1/2)^k$ number of $z^k$ size chunks, 
->   - total transfers: $(n/z)*(1/2)^k*(z^{(k+1)}/L) = 2\frac{n}{L}\log\frac{n}{Z}=O(\frac{n}{L}\log\frac{n}{Z})$ 
+>   - total transfers: $(n/z)*(1/2)^k*(z^{(k+1)}/L)*log(n/Z) = 2\frac{n}{L}\log\frac{n}{Z}=O(\frac{n}{L}\log\frac{n}{Z})$ 
 >      - (in each merge, you need read two chunks from slow to fast and write back same size.). 
 >   - total comparisons: $n\log\frac{n}{Z}=O(n\log\frac{n}{Z})$
 >   
@@ -91,18 +91,19 @@ $$Q(n;Z;L) = \Omega{\frac{\log n}{\log L}}$$
 > 
 > van emeda boas data layout in fast memory achieves this lower bound: (DATA STRUCTURE MATTERS.)
 > - recursively partition a binary search tree by half (equal height) into subtrees, align divided subtrees linearly in consecutive memory space (each base subtree must fit into a cache line of course)
+> (this is a **cache-oblivious**)
 > - ![[binary search lower io bound from van emeda boas.png|600]]
 
 ##### Q for matrix multiplication
 $$Q(n;Z;L) = \Omega{(n^3/(L\sqrt{Z}))}$$ 
-- proof 1: 
-![[matrix multiply block transfer.png|600]]
-- proof 2 from a different divide and conquer algorithm:
+- proof 1: (this is a **cache-aware**)
+	- ![[matrix multiply block transfer.png|600]]
+- proof 2 from a different divide and conquer algorithm: (this is a **cache-oblivious**)
 	- operations: $O(2n^3)$
 	- transfers: $Q(n;Z;L) = \Omega{(n^3/(L\sqrt{Z}))}$
-![[matrix multiply divide and conquer.png|600]]
+	- ![[matrix multiply divide and conquer.png|600]]
 
-## about Cache oblivious..
+### more about Cache oblivious..
 the term Cache oblivious refers to an IO algorithm whose $Q$ is irrelevant to cache size $Z$. for example, sum of $n$ size array takes $Q=O(n/L)$. for a counter example, matrix multiplication in block transfer is cache ware.
 
 ##### LRU-OPT Competitiveness Lemma
