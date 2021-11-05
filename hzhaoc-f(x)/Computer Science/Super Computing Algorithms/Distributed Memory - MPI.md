@@ -29,97 +29,74 @@ $$\alpha + t(P-2) + tn$$
 > Remember every send must have a matching receive
 > sendAsync and recvAsync can get trapped in a deadlock depending upon how the wait isimplemented.
 
-##### All-to-One Tree-Based Reduce Pseudocode
-![[network reduce.png|400]]
-- $(\alpha + \beta)logP$
-```c++
-let s = local value
-bitmask ← 1
-while bitmask < P do
-	PARTNER ← RANK xor bitmask
-	if RANK & bitmask then
-		sendAsync (s → PARTNER)
-		wait(*)
-		break //one sent, the process can drop out
-	else if (PARTNER < P)
-		recvAsync(t ← PARTNER)
-		wait(*)
-		S ← S + t
-	bitmask ← (bitmask << 1)
-
-if RANK = 0 then print(s)
-// RANK(Receiver) < RANK(Sender) < P
-```
-
-a vector version
-- time: $(\alpha + \beta n)logP$
-```c++
-let s = local value
-bitmask ← 1
-while bitmask < P do
-	PARTNER ← RANK xor bitmask
-	if RANK & bitmask then
-		sendAsync (s[:] → PARTNER)
-		wait(*)
-		break //one sent, the process can drop out
-	else if (PARTNER < P)
-		recvAsync(t[:] ← PARTNER)
-		wait(*)
-		S[:] ← S[:] + t[:]
-	bitmask ← (bitmask << 1)
-
-if RANK = 0 then print(s)
-// RANK(Receiver) < RANK(Sender) < P
-```
-
 ##### A Pseudo Code API for Collectives
 A collective is an operation that must be executed by all processes.
 - **Reduce**: 
-	- Reduce has a lower bound cost of **T(n) = (α + βn)log P** using tree based / divide and conquer.
-	- The tree based algorithm may be sending too much data by a factor of P
+	- tree based
+		- **T(n) = αlogP + βnlog P** using tree based / divide and conquer.
+		- ![[network reduce.png|400]]
+		- ```c++
+			let s = local value
+			bitmask ← 1
+			while bitmask < P do
+				PARTNER ← RANK xor bitmask
+				if RANK & bitmask then
+					sendAsync (s[:] → PARTNER)
+					wait(*)
+					break //one sent, the process can drop out
+				else if (PARTNER < P)
+					recvAsync(t[:] ← PARTNER)
+					wait(*)
+					S[:] ← S[:] + t[:]
+				bitmask ← (bitmask << 1)
+			if RANK = 0 then print(s)
+			// RANK(Receiver) < RANK(Sender) < P
+	- bucketing reduce scatter -> gather
+		- **T(n) = αP + βn**
+		
 ```c++
-//T(n) = (α + βn)log P
 reduce(A_local[1:n], root)
 ```
-- **broadcast**: reverse of Reduce, every process will have same copy
+- **Broadcast**: 
+	- reverse reduce: **T(n) = αlogP + βnlog P**
+	- scatter + all-gather (bucketing): **αP + βn**
+		- ![[network broadcast as scatter + allgather.png|250]]
 ```c++
 //T(n) = (α + βn)log P
 broadcast(A_local [1:n], root)
 ```
-- **gather**: every process has a data piece collected into one process
+- **Gather**
+	- one node collects all pieces, each from a different node
+	- reverse scatter, $T(n)=αlogP+βn$
 ```c++
-//tree-based reduce reverse: T(n) = αlogP + βn
-//scatter -> all-gather    : T(n) = αP + βn
 gather(In[1:m], Out[1:m][1:P], root)
 ```
-- **scatter**: reverse of gather
-	- Recall a process can only do one simultaneous send and receive. If the root is doing all of the sends (naive **scatter** implementation)...then they execute sequentially.
+- **Scatter**: reverse of gather
+	- naive scatter:  $T(n)=αP+βn$
+		- ![[distri mem naive scatter algo.png|300]]
 	- If we divide and conquer this scatter, new time is $T(n) = αlogP + βn ((P − 1 ) / P )=αlogP+βn$
-	- ![[scatter divide and conquer.png|450]]
+		- ![[scatter divide and conquer.png|450]]
 ```c++
-//T(n) = αlogP + βn
 scatter(In[1:m][1:P], root, Out[1:m])
 ```
-- **all-gather**: 
-	- gather and then broadcast
+- **All-gather**: 
+	- **gather -> broadcast**
 		- this is slow when n is large. ok when n is small
-	- when n is large, have each process send its piece to its neighbor in each iteration and go all the way down. this can be down in parallel.
+	- **bucketing**: when n is large, have each process send its piece to its neighbor in each iteration and go all the way down. this can be down in parallel.
 		- T(n = mP) = (α + βn/P)(P − 1) ≈ αP + βn
 		- αP is sub-optimal, βn is optimal
 ```c++
-//T(n = mP)≈ αP + βn
 allGather(In[1:m], Out[1:m][1:P])
 ```
-- **reduce-scatter**: reduce and then scatter
+- **Reduce-scatter**
+	- reduce and then scatter
+	- reverse of all-gather; T = αP + βn
 ```c++
-// reverse of all-gather; T = αP + βn
 reduceScatter(In[1:m][1:P], Out[1:m])
 ```
-- **all-reduce**
-```c++
-// reduce-scatter -> all-gather. 
-// T(n = mP) ≈ αP + βn
-```
+- **All-reduce**
+	- reduce-scatter -> all-gather. 
+	- T(n = mP) ≈ αP + βn
 
 # MPI basics
 ##### principals of message passing

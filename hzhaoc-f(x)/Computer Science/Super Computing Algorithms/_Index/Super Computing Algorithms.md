@@ -24,5 +24,5 @@ In this model, the idea is that there is not one serial RAM, but many serial RAM
 
 Sub-topics include:
 -  **[[Distributed Memory - MPI]]** Intro to the Message Passing Interface, a practical programming model 
--  **Reasoning about the effects of [[Distributed Memory - Network Topology]]** Dense linear algebra 
+-  **Reasoning about the effects of [[Distributed Memory - Network Topology]]**, [[Distributed Memory - Dense Matrix Multiply]]
 -  **Sorting** Sparse graph algorithms Graph partitioning
