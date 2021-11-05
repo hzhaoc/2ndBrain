@@ -29,7 +29,7 @@ $$\alpha + t(P-2) + tn$$
 > Remember every send must have a matching receive
 > sendAsync and recvAsync can get trapped in a deadlock depending upon how the wait isimplemented.
 
-##### All-to-One Reduce Pseudocode
+##### All-to-One Tree-Based Reduce Pseudocode
 ![[network reduce.png|400]]
 - $(\alpha + \beta)logP$
 ```c++
@@ -75,11 +75,13 @@ if RANK = 0 then print(s)
 ##### A Pseudo Code API for Collectives
 A collective is an operation that must be executed by all processes.
 - **Reduce**: 
+	- Reduce has a lower bound cost of **T(n) = (α + βn)log P** using tree based / divide and conquer.
+	- The tree based algorithm may be sending too much data by a factor of P
 ```c++
 //T(n) = (α + βn)log P
 reduce(A_local[1:n], root)
 ```
-- **broadcast**: every process will have same copy
+- **broadcast**: reverse of Reduce, every process will have same copy
 ```c++
 //T(n) = (α + βn)log P
 broadcast(A_local [1:n], root)
@@ -118,10 +120,6 @@ reduceScatter(In[1:m][1:P], Out[1:m])
 // reduce-scatter -> all-gather. 
 // T(n = mP) ≈ αP + βn
 ```
-
-##### Collectives Lower Bound
-- Reduce has a cost of T(n) = (α + βn)log P using tree based / divide and conquer.
-- The tree based algorithm may be sending too much data by a factor of P
 
 # MPI basics
 ##### principals of message passing

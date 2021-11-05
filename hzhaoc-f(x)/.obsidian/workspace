@@ -7,8 +7,11 @@
         "id": "2b84d48a9f76765a",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +88,15 @@
   },
   "active": "2b84d48a9f76765a",
   "lastOpenFiles": [
-    "Computer Science/Super Computing Algorithms/Distributed Mem.md",
     "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
+    "Computer Science/Super Computing Algorithms/Distributed Memory - Network Topology.md",
+    "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
+    "Computer Science/Super Computing Algorithms/Distributed Memory - MPI.md",
+    "Computer Science/Super Computing Algorithms/Distributed Mem.md",
     "Computer Science/Super Computing Algorithms/Work-Span BFS.md",
     "Computer Science/Super Computing Algorithms/CUDA Parallelism.md",
     "Computer Science/Embedded Systems & Compilers/Compiler - Intermediary - CFG.md",
     "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Liveness.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Reg Encoding.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Reg Alloc Opt..md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Frontend.md",
-    "Computer Science/Embedded Systems & Compilers/Registers & Memory.md"
+    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Reg Encoding.md"
   ]
 }
