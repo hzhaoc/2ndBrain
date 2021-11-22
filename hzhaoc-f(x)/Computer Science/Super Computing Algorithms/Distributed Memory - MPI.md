@@ -29,7 +29,16 @@ $$\alpha + t(P-2) + tn$$
 > Remember every send must have a matching receive
 > sendAsync and recvAsync can get trapped in a deadlock depending upon how the wait isimplemented.
 
-##### A Pseudo Code API for Collectives
+##### Collectives Operation runtime
+- a quick recap: with tree-based algorithm
+	- start cost / $\alpha$ term is optimal
+	- bandwidth / $\beta$ term is sub-optimal (except for scatter, gather)
+	- ![[network communication collectives tree based algo run time recap.png|500]]
+- a quick recap: with additional bucket-based algorithm
+	- start cost / $\alpha$ term is sub-optimal (except for scatter, gather)
+	- bandwidth / $\beta$ term is optimal by factor of 2
+	- ![[network communication collectives bucket based algo run time recap.png|500]]
+
 A collective is an operation that must be executed by all processes.
 - **Reduce**: 
 	- tree based
@@ -39,7 +48,7 @@ A collective is an operation that must be executed by all processes.
 			let s = local value
 			bitmask ← 1
 			while bitmask < P do
-				PARTNER ← RANK xor bitmask
+				PARTNER ← RANK xor(^) bitmask
 				if RANK & bitmask then
 					sendAsync (s[:] → PARTNER)
 					wait(*)
@@ -62,7 +71,6 @@ reduce(A_local[1:n], root)
 	- scatter + all-gather (bucketing): **αP + βn**
 		- ![[network broadcast as scatter + allgather.png|250]]
 ```c++
-//T(n) = (α + βn)log P
 broadcast(A_local [1:n], root)
 ```
 - **Gather**
@@ -81,7 +89,7 @@ scatter(In[1:m][1:P], root, Out[1:m])
 ```
 - **All-gather**: 
 	- **gather -> broadcast**
-		- this is slow when n is large. ok when n is small
+		- T(n = mP) = O(a*logp + βn*logp)
 	- **bucketing**: when n is large, have each process send its piece to its neighbor in each iteration and go all the way down. this can be down in parallel.
 		- T(n = mP) = (α + βn/P)(P − 1) ≈ αP + βn
 		- αP is sub-optimal, βn is optimal

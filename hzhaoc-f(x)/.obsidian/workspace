@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Science/Super Computing Algorithms/Distributed Memory - MPI.md",
+            "file": "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
             "mode": "preview"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230
+    "width": 328
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Super Computing Algorithms/Distributed Memory - MPI.md",
+                "file": "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "2b84d48a9f76765a",
   "lastOpenFiles": [
-    "Computer Science/Super Computing Algorithms/Distributed Memory - MPI.md",
-    "Computer Science/Super Computing Algorithms/Distributed Memory - Dense Matrix Multiply.md",
+    "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
     "Computer Science/Super Computing Algorithms/Distributed Memory - Network Topology.md",
-    "Computer Science/Super Computing Algorithms/Work-Span BFS.md",
+    "Computer Science/Data Structure/Tree/Binary Tree/Segmented Tree.md",
+    "Computer Science/Data Structure/Tree/Binary Tree/Binary Indexed Tree.md",
+    "Computer Science/Data Structure/Tree/Binary Tree/Balanced Search Tree.md",
+    "Computer Science/Super Computing Algorithms/Distributed Memory - MPI.md",
     "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
-    "Computer Science/Super Computing Algorithms/Distributed Memory - Basic Model.md",
-    "Computer Science/Operating System/IPC.md",
-    "Computer Science/Super Computing Algorithms/Work-Span Intro to OpenMP.md",
-    "Computer Science/Computer Architecture/Multi-Process - Shared Memory.md",
+    "Computer Science/Super Computing Algorithms/Distributed Mem.md",
+    "Computer Science/Super Computing Algorithms/Work-Span BFS.md",
     "Computer Science/Super Computing Algorithms/CUDA Parallelism.md"
   ]
 }

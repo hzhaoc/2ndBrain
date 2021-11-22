@@ -382,7 +382,8 @@
     "realloc",
     "Amongst",
     "Pseudocode",
-    "Isoefficiency"
+    "Isoefficiency",
+    "Fenwick"
   ],
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "_img",
