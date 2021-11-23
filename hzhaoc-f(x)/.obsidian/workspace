@@ -7,11 +7,8 @@
         "id": "2b84d48a9f76765a",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -52,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328
+    "width": 243
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +84,15 @@
   },
   "active": "2b84d48a9f76765a",
   "lastOpenFiles": [
-    "Computer Science/Super Computing Algorithms/Two-level Memory Model.md",
-    "Computer Science/Super Computing Algorithms/Distributed Memory - Network Topology.md",
-    "Computer Science/Data Structure/Tree/Binary Tree/Segmented Tree.md",
-    "Computer Science/Data Structure/Tree/Binary Tree/Binary Indexed Tree.md",
-    "Computer Science/Data Structure/Tree/Binary Tree/Balanced Search Tree.md",
-    "Computer Science/Super Computing Algorithms/Distributed Memory - MPI.md",
-    "Computer Science/Super Computing Algorithms/_Index/Super Computing Algorithms.md",
-    "Computer Science/Super Computing Algorithms/Distributed Mem.md",
-    "Computer Science/Super Computing Algorithms/Work-Span BFS.md",
-    "Computer Science/Super Computing Algorithms/CUDA Parallelism.md"
+    "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
+    "Computer Science/Embedded Systems & Compilers/Embed Sys - Inst Encoding.md",
+    "Computer Science/Embedded Systems & Compilers/Embed Sys - Compiler Overview.md",
+    "Computer Science/Embedded Systems & Compilers/Embed Sys - Branch, Speculation, Predication.md",
+    "Computer Science/Embedded Systems & Compilers/Embed Sys - Reg & Mem.md",
+    "Computer Science/Embedded Systems & Compilers/Embed Sys - Datapath.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Parallel LD & ST.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Network Processor.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Reg Alloc.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Storage Assginment.md"
   ]
 }

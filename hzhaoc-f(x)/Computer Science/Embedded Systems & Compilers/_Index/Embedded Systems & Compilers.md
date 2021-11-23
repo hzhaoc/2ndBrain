@@ -5,18 +5,20 @@ this entry knowledge is mainly from OMSCS CS 6291 Fall 2021, including papers an
 
 # Note List
 ### part 1
--  [[VLIW Compiler]]
-- [[Registers & Memory]]
-- [[VLIW Inst Encoding]]
-- [[Datapath]]
-- [[VLIW Branch, Speculation, Predication]]
+-  [[Embed Sys - Compiler Overview]]
+- [[Embed Sys - Reg & Mem]]
+- [[Embed Sys - Inst Encoding]]
+- [[Embed Sys - Datapath]]
+- [[Embed Sys - Branch, Speculation, Predication]]
+
 ### part 2
-- [[Compiler - Frontend]]
+- [[Compiler - Overview]]
 - [[Compiler - Intermediary - CFG]]
-- [[Compiler - Backend - Liveness]]
 - [[Compiler - Backend - Reg Alloc]]
-- [[Compiler - Backend - Reg Alloc Opt.]]
 - [[Compiler - Backend - Reg Encoding]]
+- [[Compiler - Backend - Storage Assginment]]
+- [[Compiler - Parallel LD & ST]]
+- [[Compiler - Network Processor]]
 
 # Some Background
 ### [[Bg, Trend, Cost, Power, Energy, Perform#Intro|RISC]] vs CISC

@@ -1,4 +1,18 @@
-This part of the course will focus on backend cod regeneration.
+- control flow variable liveness analysis in instruction program
+- register allocation
+- register allocation post-further-optimization
+
+# Control Flow Liveness Analysis
+A variable is considered **live** before a instruction or basic block when it is available/computed before it, and live after an instruction or block when it is computed after the instruction or block and needed later.
+$$in[I]\ =\ (out[I]\ -\ def[I])\ U\ use[I]$$
+
+![[liveness variable.png|500]]
+
+Use this equation to solve liveness variables at each program checkpoint in a **backward** manner. With this liveness information, we can perform **[[Compiler - Backend - Reg Alloc|Register Allocation]]**.
+
+
+# Register Allocation
+This part focuses on backend code regeneration.
 - Backend: generation of assembly instructions from IR
 	- Then: selecting instructions
 	- **register allocation** on them
@@ -7,7 +21,7 @@ This part of the course will focus on backend cod regeneration.
 
 First step of **Code Generation**:
 - Convert IR into [[Compiler - Intermediary - CFG|CFG]]
-- Perform data flow analysis: [[Compiler - Backend - Liveness|liveness analysis]]
+- Perform data flow analysis: liveness analysis
 - Gather Live variables Information: perform **register allocation**
 
 Register allocation: there are few registers are available: 32 float registers, 32 integer registers.  some registers have special purposes 
@@ -21,10 +35,10 @@ Register allocation: there are few registers are available: 32 float registers, 
 
 In this lesson we will be focusing on: **general purpose registers for holding integers and floats**.
 
-##### Goal
+##### goal
 maximize duration of each register value. Probably the optimization with the **most performance impact**.
 
-##### Definitions
+##### definitions
 - **gen**. (generated) variable is newly defined
 - **kill**. old value is no longer accessible.
 - **def**. on left hand side (a = 5) a is on the LHS
@@ -32,7 +46,7 @@ maximize duration of each register value. Probably the optimization with the **m
 - **live**. variable will be used again (before it is overwritten) (a = 10 , ...... , c = a + b :: ‘a’ is live because it is used)
 - **dead**. variable will never be used again and the variable will be overwritten before the next use
 
-### register allocation process
+### Register Allocation Process
 ##### overview
 -  draw an interference graph where register nodes whose live range overlaps are connected with edges. 
 -  color nodes. connected nodes must belong to different colors.
@@ -145,3 +159,53 @@ Greedy Heuristic: pick the live-range with the highest benefit of cost ratio to 
 	- Calling convention is too general and inefficient 
 	- Customize calling convention per function by doing interprocedural register allocation
 		- You may need to create a clone version of the function. A clone version is only effective at the call site, it has a specialized register allocation
+
+
+# Register Allocation Post-Optimization
+##### Cache Energy Consumption
+Load/stores that go to cache generate many activities (lookups, tag computation, data transfer, etc.), which consumes energy. **Feedback directed post-pass register reallocation** can be used to after normal register allocation is done, **to reduce load/stores with cache**. 
+- **The goal here is to reduce energy consumption by reducing load/stores, not to reduce run time since load/stores are pipelined.**
+
+Traditionally, physical registers are directly allocated on demand and memory store/loads occur when there are spills. In modern processors, infinite symbolic/virtual registers are mapped to finite physical registers. 
+
+##### Postpass Optimization
+After normal heuristic algorithm of construction of code, there are dead or unused registers  especially when number of available registers are low like 16 or 8. 
+- dead register: a register that contains a value not used anymore
+	- solution is usually load a new value
+- unused register: a register that contains a value for a long live range but will not be used in near blocks. We can use splitting here but it may be too costly.
+	- solution is usually store the value, load a new value, then restore previous value when it is used later
+
+The optimization is 
+1.  first to identify **hot regions** of code (usually in loops, about 0.3 hot and 0.7 cold codes empirically). 
+	-  can use a threshold (like avg exe freq of all basic blocks) to check if a region dynamic execution freq is above this.  The  dynamic frequency can be found during profiling.
+	-  merge all adjacent hot regions **so disjoint hot regions by cold regions register re-alloc can be done independently.**
+2.  redo the reg alloc on the hot regions to reduce dynamic cache loads/stores
+	-  identify dead/unused regs
+	-  identify spills
+	-  weighted bipartite graph matching
+		-  one party: spilled variables with block number
+		-  another party: dead/unused variables with block number
+		-  edge: if a variable and a register is matched, create an edge whose weight is determined by the number of dynamic spill  loads/stores associated with the edge.
+		-  matching goal here is to optimize total edge benefit/weights
+	-  compensation code cost analysis
+		-  in different blocks, choose edges on same variable-register.
+		-  combine such edges across adjacent blocks to avoid compensation code as much as possible. 
+		-  after computing such largest compensation code free region,  find  compensation costs at boundaries:
+			-  load in cur region
+			-  or store in cur region
+			-  or load in pre region
+			-  or store in next region
+	-  unused reg alloc
+		-  identify unused register region: merge adjacent blocks to find largest unused region for  that unused register. 
+		-  regions can overlap for different unused regs
+			-  find maximum benefit region
+			-  alloc those unused regs in this region
+			-  find next highest beneficial unused reg region, repeat.
+		-  Compensation Cost Analysis:
+			-  store original value back to memory
+			-  load variable into unused register
+			-  store variable back to memory
+			-  load original value to unused region
+
+##### some notes...
+even with a perfect reg allocator, there may still be dead or unused regs needed for postpass realloc due to gaps??
