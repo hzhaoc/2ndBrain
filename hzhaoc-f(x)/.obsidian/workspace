@@ -4,10 +4,10 @@
     "type": "split",
     "children": [
       {
-        "id": "2b84d48a9f76765a",
+        "id": "eda04a1ddf960359",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -82,7 +82,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2b84d48a9f76765a",
+  "active": "eda04a1ddf960359",
   "lastOpenFiles": [
     "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
     "Computer Science/Embedded Systems & Compilers/Embed Sys - Inst Encoding.md",
