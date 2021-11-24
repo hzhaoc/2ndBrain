@@ -21,7 +21,7 @@ is in the sequence of `xyz`
 ##### Access Graph
 - **Nodes** are unique variables. **Edges** are adjacent variables in sequence accesses whose weight are number of adjacent accesses.
 - **Weight of the Graph** is sum of all edge weights/cost.
-- **Path Cover**: A sub-Graph or a subset of paths such that each node belongs to at least a path in the graph. It may include isolated node or path of 0 length.
+- **Path Cover**: A sub-Graph or a subset of paths such that each node belongs to **exactly** a path in the graph. It may include isolated node or path of 0 length.
 - **Maximum Weighted Path Cover (MWPC)** is a path cover whose weight is maximal, and therefore its cost (original graph weights - MWPC weights) is minimal.
 
 ### General Offset Assignment (GOA)

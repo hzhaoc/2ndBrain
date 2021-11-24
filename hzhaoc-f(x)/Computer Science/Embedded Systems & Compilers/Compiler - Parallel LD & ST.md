@@ -6,7 +6,7 @@ a integer linear programming problem...
 ### approach 2: graph problem
 - each load/store is a node
 - edge is 1: can be merged, 0: otherwise.
-- pick maximum number of edges that are disjoint to be merged
+- pick maximum number of edges that are disjoint to merge
 
 ##### algorithm
 - Identify the movable boundary problem (identify which of the loads can be merged together)

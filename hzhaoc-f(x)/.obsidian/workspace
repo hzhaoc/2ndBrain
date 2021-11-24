@@ -1,14 +1,17 @@
 {
   "main": {
-    "id": "d646a5a9c7942c1a",
+    "id": "bd0716aa3048c354",
     "type": "split",
     "children": [
       {
-        "id": "eda04a1ddf960359",
+        "id": "189e96edfa060d83",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Computer Science/Embedded Systems & Compilers/Compiler - Parallel LD & ST.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -49,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243
+    "width": 354
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computer Science/Embedded Systems & Compilers/Compiler - Parallel LD & ST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "eda04a1ddf960359",
+  "active": "189e96edfa060d83",
   "lastOpenFiles": [
+    "Computer Science/Embedded Systems & Compilers/Compiler - Parallel LD & ST.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Network Processor.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Overview.md",
+    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Storage Assginment.md",
     "Computer Science/Embedded Systems & Compilers/_Index/Embedded Systems & Compilers.md",
     "Computer Science/Embedded Systems & Compilers/Embed Sys - Inst Encoding.md",
     "Computer Science/Embedded Systems & Compilers/Embed Sys - Compiler Overview.md",
     "Computer Science/Embedded Systems & Compilers/Embed Sys - Branch, Speculation, Predication.md",
     "Computer Science/Embedded Systems & Compilers/Embed Sys - Reg & Mem.md",
-    "Computer Science/Embedded Systems & Compilers/Embed Sys - Datapath.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Parallel LD & ST.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Network Processor.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Reg Alloc.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Backend - Storage Assginment.md"
+    "Computer Science/Embedded Systems & Compilers/Embed Sys - Datapath.md"
   ]
 }
