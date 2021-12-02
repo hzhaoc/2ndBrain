@@ -10,5 +10,5 @@
 - [[Computer Network]]
 - [[Operating System]]
 - [[Programming]]
-- [[Super Computing Algorithms]]
+- [[Scalable Computing Algorithms]]
 - [[Blockchain]]

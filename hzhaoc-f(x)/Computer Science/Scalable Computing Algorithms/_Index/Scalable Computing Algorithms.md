@@ -3,7 +3,7 @@ This Category of knowledge is mainly from GaTech OMSCS CSE 6220 Course "Intro to
 ## Syllabus
 The course topics are centered on three different ideas or extensions to the usual serial RAM model you encounter in CS 101. Recall that a serial RAM assumes a sequential or serial processor connected to a main memory.
 
-### Unit 1: [[Two-level Memory Model]]
+### Unit 1: [[Two-level Mem Model]]
 In this model, we return to a serial RAM, but instead of having only a processor connected to a main memory, there is a smaller but faster scratchpad memory in between the two. The algorithmic question here is how to use the scratchpad effectively, in order to minimize costly data transfers from main memory.
 
 Sub-topics include:
@@ -23,6 +23,6 @@ Sub-topics include:
 In this model, the idea is that there is not one serial RAM, but many serial RAMs connected by a network. In this model, each serial RAM’s memory is private to the other RAMs; consequently, the processors must coordinate and communicate by sending and receiving messages.
 
 Sub-topics include:
--  **[[Distributed Memory - MPI]]** Intro to the Message Passing Interface, a practical programming model 
--  **Reasoning about the effects of [[Distributed Memory - Network Topology]]**, [[Distributed Memory - Dense Matrix Multiply]]
--  **Sorting** Sparse graph algorithms Graph partitioning
+-  **[[Dist. Mem - MPI]]** Intro to the Message Passing Interface, a practical programming model 
+-  **Reasoning about the effects of [[Dist. Mem - Network Topology]]**, [[Dist. Mem - Dense Matrix Multiply]]
+-  **[[Dist. Mem - Sorting]]** Sparse graph algorithms Graph partitioning

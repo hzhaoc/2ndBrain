@@ -383,7 +383,8 @@
     "Amongst",
     "Pseudocode",
     "Isoefficiency",
-    "Rematerialization"
+    "Fenwick",
+    "splitters"
   ],
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "_img",
