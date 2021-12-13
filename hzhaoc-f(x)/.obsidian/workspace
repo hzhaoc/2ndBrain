@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Science/Scalable Computing Algorithms/Dist. Mem - Network Topology.md",
+            "file": "Computer Science/Scalable Computing Algorithms/Dist. Mem - BFS.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Scalable Computing Algorithms/Dist. Mem - Network Topology.md",
+                "file": "Computer Science/Scalable Computing Algorithms/Dist. Mem - BFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "189e96edfa060d83",
   "lastOpenFiles": [
-    "Computer Science/Scalable Computing Algorithms/Dist. Mem - Network Topology.md",
-    "Computer Science/Scalable Computing Algorithms/_Index/Scalable Computing Algorithms.md",
-    "Computer Science/Scalable Computing Algorithms/Dist. Mem - MPI.md",
-    "Computer Science/Scalable Computing Algorithms/Dist. Mem - Dense Matrix Multiply.md",
     "Computer Science/Scalable Computing Algorithms/Dist. Mem - BFS.md",
-    "Computer Science/Scalable Computing Algorithms/Two-level Mem Model.md",
+    "Computer Science/Scalable Computing Algorithms/Dist. Mem - Network Topology.md",
     "Computer Science/Scalable Computing Algorithms/Dist. Mem - Sorting.md",
+    "Computer Science/Scalable Computing Algorithms/Two-level Mem Model.md",
+    "Computer Science/Scalable Computing Algorithms/_Index/Scalable Computing Algorithms.md",
     "Computer Science/Scalable Computing Algorithms/CUDA Parallelism.md",
-    "Computer Science/Super Computing Algorithms/Distributed BFS.md",
-    "Computer Science/Embedded Systems & Compilers/Compiler - Parallel LD & ST.md"
+    "Computer Science/Scalable Computing Algorithms/Dist. Mem - MPI.md",
+    "Computer Science/Scalable Computing Algorithms/Work-Span BFS.md",
+    "Computer Science/Scalable Computing Algorithms/Work-Span Intro to OpenMP.md",
+    "Computer Science/Scalable Computing Algorithms/Work-Span Scans & List Ranking.md"
   ]
 }
