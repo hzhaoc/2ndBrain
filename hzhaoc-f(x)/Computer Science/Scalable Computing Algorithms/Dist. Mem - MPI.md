@@ -68,7 +68,7 @@ reduce(A_local[1:n], root)
 ```
 - **Broadcast**: 
 	- reverse reduce: **T(n) = αlogP + βnlog P**
-	- scatter + all-gather (bucketing): **αP + βn**
+	- scatter + all-gather (bucketing): **T(n) = αP + βn**
 		- ![[network broadcast as scatter + allgather.png|250]]
 ```c++
 broadcast(A_local [1:n], root)
