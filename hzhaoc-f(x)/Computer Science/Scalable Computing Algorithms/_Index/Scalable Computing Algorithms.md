@@ -25,4 +25,4 @@ In this model, the idea is that there is not one serial RAM, but many serial RAM
 Sub-topics include:
 -  **[[Dist. Mem - MPI]]** Intro to the Message Passing Interface, a practical programming model 
 -  **Reasoning about the effects of [[Dist. Mem - Network Topology]]**, [[Dist. Mem - Dense Matrix Multiply]]
--  **[[Dist. Mem - Sorting]]** Sparse graph algorithms Graph partitioning, [[Dist. Mem - BFS]]
+-  **[[Dist. Mem - Sorting]]** Sparse graph algorithms [[Dist. Mem - Graph Partitioning|Graph partitioning]], [[Dist. Mem - BFS]]

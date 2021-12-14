@@ -384,7 +384,11 @@
     "Pseudocode",
     "Isoefficiency",
     "Fenwick",
-    "splitters"
+    "splitters",
+    "unvisited",
+    "Kernighan",
+    "eigenpair",
+    "eigenpair"
   ],
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "_img",
