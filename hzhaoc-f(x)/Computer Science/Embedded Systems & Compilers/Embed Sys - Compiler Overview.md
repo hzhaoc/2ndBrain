@@ -36,4 +36,4 @@
 - vertical: decisions across pipelined instructions
 	- The compiler uses the maximum latency. What happens if the operation completes before its maximum latency?
 		- **EQ (equal) Model**: stall until assigned latency expires, but this will lead to difficulties with exceptions, and it is inefficient
-		- **LEQ Model** (less-than-or-equal model): an operation may complete in fewer cycles. This is an efficient model. It is better at handling exceptions because it can use the extra time to handle exceptions.
+		- **LEQ Model**: (less-than-or-equal model): an operation may complete in fewer cycles. This is an efficient model. It is better at handling exceptions because it can use the extra time to handle exceptions.

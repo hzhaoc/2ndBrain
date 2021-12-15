@@ -21,7 +21,7 @@ trying to move load/stores within Motion Range to increase parallelism.
 - Motion Range: instruction range within which a load/stores can be moved. For example, a load's range is typically between a previous store, and next use. 
 - Since a load/store's motion boundary can also be a load/store, the motion co-move and is not fixed. But we can use a Pseudo fixed boundary approach to deal with it to try maximizing motion ranges for all load/stores to create parallelism opportunities. 
 	- for store: move as early as possible
-	- for store: move as late as possible.
+	- for load: move as late as possible.
 
 ##### Motion Schedule graph
 ![[Motion Schedule Graph.png|500]]

@@ -15,7 +15,7 @@ In some cases, you still need many bits. For example, for 8 register architectur
 	- Decoding can be performed in parallel while the opcodes is being decoded.
 	- We can even parallelize the decoding of the registers.
 
-### integration into [[Compiler - Backend - Reg Alloc|Register Allocation]]
+### Integration into [[Compiler - Backend - Reg Alloc|Register Allocation]]
 ![[diff encode in reg alloc.png|500]]
 
 ##### adjacency graph

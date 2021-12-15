@@ -95,18 +95,17 @@ Misaligned access can cause an exception:
 - VLIW will treat misaligned registers accesses simply as **non-recoverable exception**, discarding the whole registers.
 
 # Memory Architecture
-VLIW is a load/store architecture that mostly reuses RISC memory-addressing concepts. The loads are separate and must be done before any operations can be done on them. VLIW support special addressing modes. 
+**VLIW is a load/store architecture that mostly reuses RISC memory-addressing concepts**. The loads are separate and must be done before any operations can be done on them. VLIW support special addressing modes. 
 
 **Registers hold data and address **
-- so compilers have more flexibility and control. memory is banked and therefore power efficient
+- so compilers have more flexibility and control.
 - memory is banked and therefore power efficient
 	- memory banks → a block of memory is separated into different sections. This will lead to concurrent access to memory. This is called X-Y memory, the x bank provides the first operand, the second bank provides the second operand
-- **GPUs**
-	- are a special embedded system. 
-		- They have constant memory - all constant variables are stored in a memory block
-		- shader memory - a group of variables that are used together are stored together. For example: the information on a pixel. Shader memory efficiently supports group access
-		- shared memory - used for memory that is shared between different threads.
-		- local memory - memory that is just for a specific thread. Separating operands into specific memory increases bandwidth. Users can assign operands to specific memories -- lately compilers have taken over some of this responsibility
+- **GPUs** are special embedded systems. 
+	- They have constant memory - all constant variables are stored in a memory block
+	- shader memory - a group of variables that are used together are stored together. For example: the information on a pixel. Shader memory efficiently supports group access
+	- shared memory - used for memory that is shared between different threads.
+	- local memory - memory that is just for a specific thread. Separating operands into specific memory increases bandwidth. Users can assign operands to specific memories -- lately compilers have taken over some of this responsibility
 
 ##### Cache Prefetching
 Anticipate and prefetch blocks from memory into cache ahead of time, may waste bandwidth and result in cache pollution if guess is wrong.

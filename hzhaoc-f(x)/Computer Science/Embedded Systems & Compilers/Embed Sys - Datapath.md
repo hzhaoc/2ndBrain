@@ -1,13 +1,13 @@
 ![[VLIW data path.png|600]]
 
 **The Data path:**
-- The controller makes sure the data is latched into the buffer properly, coordinates ALU operations, and checks for hazards.In VLIW datapath is the collection of its execution units, which performs data transformation
+- The controller makes sure the data is latched into the buffer properly, coordinates ALU operations, and checks for hazards. In VLIW datapath is the collection of its execution units, which performs data transformation
 
 **CISC and DSP:**
 - all the operands reside in memory. So there must be memory-to-memory operations and complex addressing modes. There are accumulators: which are target registers of the ALU. This means the compiler is forced to make binding choices and optimizations too early to reduce the memory traffic.
 
 **VLIW and RISC**
-the operands are in the registers before any work is done that uses them. This means there needs to be a lot of registers. Especially since all there are multiple instructions executing in parallel. All those instructions need data stored in registers. The compiler must be very aggressive with register allocation. **The compiler must decouple scheduling and register allocation**. So first scheduling is performed, the register allocation is done.
+the operands are in the registers before any work is done that uses them. This means there needs to be a lot of registers, especially since all there are multiple instructions executing in parallel. All those instructions need data stored in registers. The compiler must be very aggressive with register allocation. **The compiler must decouple scheduling and register allocation**. So first scheduling is performed, then the register allocation is done.
 
 **Datapath Operations Cycles**
 - The 32 bit processors take way more cycles than the 16 bit versions because the 32 bit operations break down the operations into 16 bit operations and use the carry bit to extend the size. 16 bit buses operate much more efficiently than 32 bit buses.

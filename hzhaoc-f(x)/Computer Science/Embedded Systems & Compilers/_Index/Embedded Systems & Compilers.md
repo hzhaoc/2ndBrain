@@ -13,7 +13,6 @@ this entry knowledge is mainly from OMSCS CS 6291 Fall 2021, including papers an
 
 ### part 2
 - [[Compiler - Overview]]
-- [[Compiler - Intermediary - CFG]]
 - [[Compiler - Backend - Reg Alloc]]
 - [[Compiler - Backend - Reg Encoding]]
 - [[Compiler - Backend - Storage Assginment]]

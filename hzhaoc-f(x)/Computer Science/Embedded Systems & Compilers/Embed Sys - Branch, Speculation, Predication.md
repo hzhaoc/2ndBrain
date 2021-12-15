@@ -93,8 +93,7 @@ Is mainly used to make sure the data loaded from memory is the correct value.
 - here only `slct` (conditional select) is used for predication based on the conditional variable `$b1`.  `slct` usage is similar to `cmov` (conditional move)
 ![[VLIW partial predication.png|500]]
 
-##### predication in embedded domain
-partial predication is appealing.
+- **partial predication is appealing** in embedded domain
 
 ### System operations
 System operations → all functions that control system around the CPU. (for example: dealing with I/O and peripherals). 

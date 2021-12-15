@@ -1,7 +1,6 @@
 Manage sequence of accesses to efficiently use address registers in instruction sequence.
 
 ### Simple Offset Assignment (SOA)
-
 ###### assumptions
 - every object address is size of one word
 - a single address register is used to address all variables

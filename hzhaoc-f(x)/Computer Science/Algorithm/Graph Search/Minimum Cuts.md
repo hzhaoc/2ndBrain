@@ -1,9 +1,5 @@
-Given an undirected and unweighted graph, find the smallest cut (smallest number of edges that disconnects the graph into two components).  The input graph may have parallel edges.
-
 ##### Karger's Minimum Cuts
-Because it's random contract, result may not always be minimum number of cuts, 
-so do it $n*n*logn + 1$ times,
-Probability of returning a min cut $\approx\frac{1}{n^2}$
+
 ```python
 def KargerMinCut(dic):
 	"""
