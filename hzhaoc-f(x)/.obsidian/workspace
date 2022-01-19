@@ -9,9 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Science/Computer Network/Overview.md",
-            "mode": "preview",
-            "source": false
+            "file": "Computer Science/Operating System/DFS.md",
+            "mode": "preview"
           }
         }
       }
@@ -40,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "minimum cuts",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234
+    "width": 275
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Computer Network/Overview.md",
+                "file": "Computer Science/Operating System/DFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +88,15 @@
   },
   "active": "189e96edfa060d83",
   "lastOpenFiles": [
-    "Computer Science/Computer Network/Overview.md",
-    "Computer Science/Computer Network/Network Protocol.md",
-    "Computer Science/Algorithm/Graph Search/Minimum Cuts.md",
-    "Computer Science/Algorithm/Graph Search/_Index/Graph Search.md",
-    "Computer Science/Algorithm/Graph Search/Shortest Path.md",
-    "Computer Science/Data Structure/Bloom Filter.md",
-    "Computer Science/Data Structure/Tree/Binary Tree/Heap.md",
-    "Computer Science/Data Structure/Basic.md",
-    "Computer Science/Algorithm/Graph Search/SCC.md",
-    "Computer Science/Data Structure/Disjoint Set.md"
+    "Computer Science/Operating System/DFS.md",
+    "Computer Science/Operating System/I, O.md",
+    "Computer Science/Operating System/IPC.md",
+    "Computer Science/Operating System/Linux.md",
+    "Computer Science/Operating System/Mem Mgmt.md",
+    "Computer Science/Operating System/Process.md",
+    "Computer Science/Operating System/Signal.md",
+    "Computer Science/Operating System/Synchronization.md",
+    "Computer Science/Operating System/Task Scheduler.md",
+    "Computer Science/Operating System/Virtualization.md"
   ]
 }
