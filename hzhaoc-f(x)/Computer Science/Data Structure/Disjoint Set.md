@@ -67,11 +67,9 @@ class UnionFind:
 
 	def find(self, x):
 		# optimize by Path Compression
-		x_parent = self._parents[x]
-		if x_parent == x:
+		if x == self._parents[x]:
 			return x
-		self._parents[x] = self.find(x_parent)
-		return self._parents[x]
+		return self.find(self._parents[x])
 
 	def union(self, x, y):
 		# optimize by Union by Rank
@@ -86,7 +84,7 @@ class UnionFind:
 			self._parents[y_root] = x_root
 		elif x_rank < y_rank:  # do opposite
 			self._parents[x_root] = y_root
-		elif x_rank == y_rank:  # arbitrarily do same as x_rank > y_rank, additionally add 1 to x's root's rank
+		else:  # x_rank == y_rank, arbitrarily do same as x_rank > y_rank, additionally add 1 to x's root's rank
 			self._parents[y_root] = x_root
 			self._ranks[x_root] += 1
 

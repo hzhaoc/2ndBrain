@@ -398,5 +398,7 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 50
-  }
+  },
+  "legacyEditor": false,
+  "livePreview": true
 }

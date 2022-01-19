@@ -41,49 +41,22 @@ class Graph:
 	def minDist(self, start):
 		'''
 		Dijkstra’s Algorithm. compute shortest distance between a starting vertex and all other vertexes in a graph
-		
-		input graph data structure: dict. key is vertex, value is a list of tuples (adjacent vertex i, distance i)
-		v, l = graph[u][j]: vertex u's jth adjacent vertex is vertex v at distance l
-
 		'''
 		maxdist = float('inf')
-		dists = {v: maxdist for v in self.G.keys()}  # initialize all vertex distance to start vertex to be infinite, (start vertex itself is 0)
+		dists = {v: maxdist for v in self.G.keys()}
 		seen = set()
-		# lth = len(self.G.keys())
-		pq = [(0, start)]  # initiate cuts with priority queue (heap) from a starting vertex, and distance 0
-		while pq:  # all V to V-X vertexs (include inner V because this algo doesn't delete old edges) 
-			cur_dist, cur_v = heapq.heappop(pq)  # ensure min distance poped out for one vertex at a time in vertex interation
-			if cur_v in seen:  # ignore explored vertex
+		pq = [(0, start)]
+		while pq:
+			cur_dist, cur_v = heapq.heappop(pq)
+			if cur_v in seen:
 				continue
-			dists[cur_v] = cur_dist  # update min distance for this vertex
-			seen.add(cur_v)  # mark current vertex as explored
-			for neighbor, weight in self.G[cur_v]:  # insert new edges into queue (to compute min distance in next iteration)
+			dists[cur_v] = cur_dist
+			seen.add(cur_v)
+			for neighbor, weight in self.G[cur_v]:
 				if neighbor in seen:
 					continue
 				dist = cur_dist + weight
 				heapq.heappush(pq, (dist, neighbor))
-		return dists
-		
-	def NewminDist(self, start):
-		'''
-		compute shortest distance between a starting vertex and all other vertexes in a graph
-		deal with negative paths? 
-		Improved Dijkstra’s Algorithm
-		Time Complexity: depends on negative paths? might run into infinite loops?
-		'''
-		maxdist = float('inf')
-		dists = {v: maxdist for v in self.G.keys()}
-		dists[start] = 0
-		pq = [(0, start)]
-		while pq:
-			cur_dist, cur_v = heapq.heappop(pq)
-			if cur_dist > dists[cur_v]:
-				continue
-			for neighbor, weight in self.G[cur_v]:
-				dist = cur_dist + weight
-				if dist < dists[neighbor]:
-					dists[neighbor] = dist  # if negative weight, min distance might be updated here
-					heapq.heappush(pq, (dist, neighbor))
 		return dists
 ```
 
