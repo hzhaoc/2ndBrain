@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Computer Science/Computer Network/Application & Transport Layers.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 217
+    "width": 318
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
