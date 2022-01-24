@@ -10,7 +10,8 @@
           "type": "markdown",
           "state": {
             "file": "Computer Science/Operating System/DFS.md",
-            "mode": "preview"
+            "mode": "preview",
+            "source": false
           }
         }
       }
