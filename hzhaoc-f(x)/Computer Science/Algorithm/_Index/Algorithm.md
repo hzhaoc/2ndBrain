@@ -1,5 +1,5 @@
 - [[Dynamic Programming]]
-- [[Graph Search]]
+- [[Graph]]
 - [[Divide and Conquer]]
 - [[Greedy]]
 - [[Approaches]]
