@@ -1,3 +1,4 @@
--	[[Permutation]]
+-	[[Number Thoery]]
+- [[Permutation]]
 -	[[Statistics]]
 -	[[Linear Algebra]]
