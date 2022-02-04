@@ -5,7 +5,7 @@ Let $T(n)$ be a monotonically increasing function that satisfies
 - $T(n)=aT(n/b) +f(n)$
 - $T(1)=c$
 
-where $a≥1$, $b≥2$, $c>0$. 
+where $a≥1$, $b>1$, $c>0$. 
 
 Iff $f(n)∈Θ(n^d)$ where $d≥0$, then 
 - $T(n)=Θ(n^d)$ if $a<b^d$

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Mathematics/Number Theory/Modular Arithmetic.md",
+            "file": "Computer Science/Algorithm/Master Theorem.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Number Theory/Modular Arithmetic.md",
+                "file": "Computer Science/Algorithm/Master Theorem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "189e96edfa060d83",
   "lastOpenFiles": [
+    "Computer Science/Algorithm/Master Theorem.md",
     "Mathematics/Number Theory/Modular Arithmetic.md",
     "Mathematics/Number Theory/Lemmas.md",
     "Mathematics/Number Theory/Index/Number Thoery.md",
@@ -97,7 +98,6 @@
     "Computer Science/Computer Network/_Index/Computer Network.md",
     "Computer Science/Computer Network/Web Security/_Index/Web Security.md",
     "Computer Science/Computer Network/Application & Transport Layers.md",
-    "Computer Science/Computer Network/Overview.md",
-    "Computer Science/Computer Network/Network Protocol.md"
+    "Computer Science/Computer Network/Overview.md"
   ]
 }
