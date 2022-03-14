@@ -5,3 +5,4 @@
 - [[Approaches]]
 - [[NP Complete]]
 - [[Master Theorem]]
+- ![[Cheatsheet]]

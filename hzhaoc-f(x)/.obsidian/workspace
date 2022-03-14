@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "189e96edfa060d83",
+        "id": "e64c5763c43016ce",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Science/Algorithm/Master Theorem.md",
-            "mode": "source",
+            "file": "Computer Science/Algorithm/Max-Flow.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "minimum cuts",
+                "query": "gcd",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318
+    "width": 276
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Science/Algorithm/Master Theorem.md",
+                "file": "Computer Science/Algorithm/Max-Flow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "189e96edfa060d83",
+  "active": "e64c5763c43016ce",
   "lastOpenFiles": [
-    "Computer Science/Algorithm/Master Theorem.md",
+    "Computer Science/Algorithm/Max-Flow.md",
+    "Computer Science/Algorithm/Greedy/MST.md",
+    "Computer Science/Algorithm/Graph/Shortest Path.md",
     "Mathematics/Number Theory/Modular Arithmetic.md",
     "Mathematics/Number Theory/Lemmas.md",
-    "Mathematics/Number Theory/Index/Number Thoery.md",
-    "Mathematics/_Index/Mathematics.md",
-    "Computer Science/Web Security/_Index/Web Security.md",
-    "Computer Science/Computer Network/_Index/Computer Network.md",
-    "Computer Science/Computer Network/Web Security/_Index/Web Security.md",
-    "Computer Science/Computer Network/Application & Transport Layers.md",
-    "Computer Science/Computer Network/Overview.md"
+    "Computer Science/Algorithm/Cheatsheet.md",
+    "Computer Science/Algorithm/Graph/SCC.md",
+    "Computer Science/Algorithm/Graph/Minimum Cuts.md",
+    "Computer Science/Data Structure/Hashing.md",
+    "Computer Science/Data Structure/Disjoint Set.md"
   ]
 }

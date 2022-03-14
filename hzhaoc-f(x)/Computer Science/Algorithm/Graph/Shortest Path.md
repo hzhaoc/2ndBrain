@@ -33,15 +33,11 @@ class Graph:
 		self.G_rev[v].append(u)
 		return
 
-	# add edge with length
 	def addEdgeLen(self, u, v, l):
 		self.G[u].append((v, l)) 
 		return
 
 	def minDist(self, start):
-		'''
-		Dijkstra’s Algorithm. compute shortest distance between a starting vertex and all other vertexes in a graph
-		'''
 		maxdist = float('inf')
 		dists = {v: maxdist for v in self.G.keys()}
 		seen = set()
