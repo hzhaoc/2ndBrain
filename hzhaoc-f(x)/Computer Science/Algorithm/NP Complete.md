@@ -10,7 +10,7 @@ By definition, a binary decision problem is in the set of Non-deterministic Poly
 
 ### NP-hard
 A problem is NP-hard iff:
-- any other problem in NP can be poly-time "reduced" (it may actually increase program runtime complexity) to this problem. In other words, all other problems can be solved by first solving this problem plus polynomial transfer, or this problem is as hard as any other NP problem.
+- any other problem in NP can be poly-time "reduced" (it may actually increase program runtime complexity) to this problem. In other words, any NP problem cannot be harder than this NP-hard problem, or this NP-hard problem is as hard as any other NP problem.
 
 Note: halting problem is NP-hard, but halting problem is NOT in NP.
 
@@ -24,7 +24,7 @@ A problem is NP-complete (Non-deterministic Polynomial Complete) iff:
 - the problem is in NP.
 - the problem is NP-hard. 
 
-### N=/=NP?
+### N=NP?
 this notorious question states that if there's a polynomial-time deterministically solvable algorithm / solution to an NP-Complete problem, then any NP-complete problem can be solved deterministically in poly time using this algorithm.
 
 Most believe ("widely conjectured"), yet not proved, $N\neq{NP}$. That is, there's no such polynomial-time deterministically solvable algorithm to solve any NP-Complete problem. This leads that, empirically, if one can not design a poly-time algorithm from common solutions such as greedy, DP, divide and conquer, or any data structures such as disjoint set, hash table, array, linked list, tree, heap, etc, one should consider probability of NP, by proving some NP problem can be poly-time deduced to the problem one is trying to solve.
