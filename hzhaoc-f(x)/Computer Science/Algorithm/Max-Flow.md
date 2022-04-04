@@ -60,6 +60,7 @@ class Graph:
 ```
 
 # Min-Cut problem
+also see [[Linear Programming#strong duality]]
 - input: flow network
 - output: st-cut (L, R) with min capacity
 
