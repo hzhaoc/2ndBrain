@@ -45,7 +45,7 @@ def MST_Kruskal(graph):
 	compute MST (minimum spanning tree)
 	Kruskal's Algorithm
 	high-level description: iteration through edges, find minimal edges in each iteration and add it to MST until MST is completed
-	remmeber to check cycles in each iteration to maintain MST property (use union-find to achieve O(1) cycle check)
+	remmeber to check cycles in each iteration to maintain MST property (use union-find to achieve O(logn) cycle check)
 	it tracks both total cost and MST structure
 	
 	@params
