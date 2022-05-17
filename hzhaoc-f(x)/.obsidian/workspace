@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Physics/Quantum Mechanics/量子纠缠.md",
+            "file": "Physics/Energy Physics/Future Energy Storage.md",
             "mode": "preview",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gcd",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234
+    "width": 277
   },
   "right": {
     "id": "1dcb0317d36a7fb8",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/量子纠缠.md",
+                "file": "Physics/Energy Physics/Future Energy Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "e64c5763c43016ce",
   "lastOpenFiles": [
+    "Physics/Energy Physics/Future Energy Storage.md",
     "Physics/Quantum Mechanics/量子纠缠.md",
-    "().md",
-    "Physics/Quantum Mechanics/不确定原理.md",
-    "Physics/Quantum Mechanics/_Index/Quantum Mechanics.md",
+    "Physics/Energy Physics/可控核聚变.md",
     "Physics/Mechanics/力矩，角动量.md",
+    "Physics/Quantum Mechanics/不确定原理.md",
     "Physics/Mechanics/_Index/Mechanics.md",
-    "Physics/_Index/Physics.md",
-    "Computer Science/Algorithm/RSA.md",
-    "Computer Science/Algorithm/NP Complete.md",
-    "Computer Science/Algorithm/Linear Programming.md"
+    "Physics/Energy Physics/_Index/Energy Physics.md",
+    "Computer Science/Operating System/Task Scheduler.md",
+    "Computer Science/Scalable Computing Algorithms/Dist. Mem - Sorting.md",
+    "Computer Science/Scalable Computing Algorithms/CUDA Parallelism.md"
   ]
 }
