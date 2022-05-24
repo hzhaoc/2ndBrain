@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "e64c5763c43016ce",
+        "id": "bccd7fa0ece66f18",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Physics/Quantum Mechanics/电磁相互作用.md",
-            "mode": "source",
+            "file": "Informatics/碳纳米管.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum Mechanics/电磁相互作用.md",
+                "file": "Informatics/碳纳米管.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e64c5763c43016ce",
+  "active": "bccd7fa0ece66f18",
   "lastOpenFiles": [
-    "Physics/Quantum Mechanics/电磁相互作用.md",
+    "Informatics/碳纳米管.md",
+    "Informatics/_Index/Informatics.md",
+    "Physics/Energy Physics/_Index/Energy Physics.md",
+    "Physics/化学/_Index/化学.md",
+    "Physics/化学/原子轨道.md",
+    "Physics/化学/分子轨道.md",
+    "Physics/Energy Physics/可控核聚变.md",
+    "Physics/Energy Physics/能源存储.md",
     "Physics/Quantum Mechanics/核聚变.md",
-    "Physics/Quantum Mechanics/核裂变.md",
-    "Physics/Quantum Mechanics/_Index/Quantum Mechanics.md",
-    "Physics/Quantum Mechanics/基本粒子.md",
-    "Physics/Quantum Mechanics/引力相互作用.md",
-    "Physics/Quantum Mechanics/强相互作用.md",
-    "Physics/Quantum Mechanics/弱相互作用.md",
-    "Physics/Quantum Mechanics/量子纠缠.md",
-    "Physics/Quantum Mechanics/不确定原理.md"
+    "Physics/Quantum Mechanics/电磁相互作用.md"
   ]
 }

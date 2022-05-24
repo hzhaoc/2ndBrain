@@ -400,5 +400,6 @@
     "downscalePercent": 50
   },
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "promptDelete": false
 }
