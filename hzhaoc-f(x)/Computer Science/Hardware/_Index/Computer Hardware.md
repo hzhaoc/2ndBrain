@@ -1,7 +1,2 @@
 - [[CPU]]
-- [[Crystal Oscillator]]
-- [[Integrated Circuit]]
-- [[Semiconductor]]
 - [[Storage Hierarchy]]
-- [[Photomask]]
-- [[Transistor]]

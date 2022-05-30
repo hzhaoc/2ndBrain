@@ -1,5 +1,5 @@
 - [[Capacitance]]
-- [[Carrier]]
+- [[载流子]]
 - [[Charge]]
 - [[Chemical Bond]]
 - [[Current]]

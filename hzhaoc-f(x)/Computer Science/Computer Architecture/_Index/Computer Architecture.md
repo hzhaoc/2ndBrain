@@ -1,8 +1,5 @@
 Index note - Computer Architecture:
 -	[[Bg, Trend, Cost, Power, Energy, Perform]]
--	[[Arch. - Cost]]
--	[[Arch. - Performance]]
--	[[Arch. - Power & Energy]]
 -	[[ILP - ILP & Deps.]]
 -	[[ILP - Pipeline]]
 -	[[ILP - OOO EXE]]

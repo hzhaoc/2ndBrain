@@ -100,7 +100,7 @@ This is Bose-Einstein empirical model. N is a manufacturing process complexity.
 - TSMC 2020 300mm wafer at 5nm at ~ $17K cost.
 - I/O pins plus functions determine die size.
 - testing add prior cost by 50%!
-- for low volume IR manufacturing, [[Photomask]] can be a non-negligible cost.
+- for low volume IR manufacturing, [[光罩]] can be a non-negligible cost.
 
 ### Trends in Power and Energy in Integrated Circuits
 ##### Systematic perspective

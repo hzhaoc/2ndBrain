@@ -7,6 +7,6 @@
 - [[核裂变]]
 - [[电磁相互作用]]
 - [[结合能]]
+- [[量子隧穿效应]]
 
-quantum tunneling?
 superposition?
