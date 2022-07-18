@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Electrical Engineering/无线供电.md",
+            "file": "Physics/能源、 材料、未来/_Index/能源、材料、未来.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "PN结",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Electrical Engineering/无线供电.md",
+                "file": "Physics/能源、 材料、未来/_Index/能源、材料、未来.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "e64c5763c43016ce",
   "lastOpenFiles": [
-    "Electrical Engineering/无线供电.md",
+    "Physics/能源、 材料、未来/_Index/能源、材料、未来.md",
+    "Physics/能源、 材料、未来/光电.md",
     "Electrical Engineering/半导体与晶体管.md",
-    "Computer Science/Computer Architecture/_Index/Computer Architecture.md",
+    "Electrical Engineering/电动势.md",
+    "Electrical Engineering/洛伦兹力.md",
+    "Electrical Engineering/无线供电.md",
     "Electrical Engineering/光罩.md",
-    "Electrical Engineering/_Index/Electrical Engineering.md",
-    "晶体管.md",
-    "Electrical Engineering/晶体管.md",
-    "Physics/Quantum Mechanics/结合能.md",
-    "Physics/Electromagnetism/载流子.md",
-    "Electrical Engineering/MOSFET.md"
+    "Physics/Quantum Mechanics/不确定原理.md",
+    "Physics/Quantum Mechanics/基本粒子.md",
+    "Physics/Quantum Mechanics/引力相互作用.md"
   ]
 }
