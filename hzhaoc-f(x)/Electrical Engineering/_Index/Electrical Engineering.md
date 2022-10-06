@@ -7,3 +7,6 @@
 - [[半导体与晶体管]]
 - [[Integrated Circuit]]
 - [[Crystal Oscillator]]
+- [[阻抗]]
+- [[谐振电路]]
+- [[tesla coil]]

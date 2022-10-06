@@ -1,7 +1,8 @@
 {
   "theme": "obsidian",
   "translucency": false,
-  "baseFontSize": 16,
+  "baseFontSize": 14,
   "cssTheme": "",
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [],
+  "accentColor": ""
 }

@@ -29,7 +29,7 @@ We know each activation function in the network is a single [[Logistic Regressio
 $$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}[y_k^{(i)}log(h_\Theta(x^{(i)}))_k + (1-y_k^{(i)})log(1-log(h_\Theta(x^{(i)}))_k)] + \frac{\lambda}{2m}\sum_{l=1}^{L-1}\sum_{i=1}^{s_l}\sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^2$$
 where
 - $K$ is number of classes in output layer (including input and output)
-- $h_\Theta(x^{(i)}))_k$ is the **whole** binary-output function on $k_{th}$ output class, for the $i_{th}$ training example. (**Not just logistic regression to output to last layer**)
+- $h_\Theta(x^{(i)}))_k$ is the **whole** binary-output function on the $k$-th output class, for the $i$-th training example. (**Not just logistic regression to output to last layer**)
 
 **Another form** of cost function without regularization, is as below:
 $$J(\theta)=\frac{1}{2m}\sum_{i}^{m}\sum_{k}^{K}(h_\Theta(x^{(i)})_k-y^{(i)}_k)^2$$

@@ -1,7 +1,0 @@
-- [[Boosting]]
-- [[Ensemble]]
-- [[Model Evaluation]]
-- [[Computer Science/Machine Learning/Unsupervised/Clustering]]
-- [[Logistic Regression]]
-- [[Support Vector Machine]]
-- [[K-Nearest Nerghbors]]
