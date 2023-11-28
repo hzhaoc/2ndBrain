@@ -1,0 +1,20 @@
+My view of skill range for building a full-stack robotics system
+- overall CAD mechatronics design
+- modular breakdown (for different mechanical parts)
+- for each mechanical part, system breakdown 
+	- electronics
+		- PCB CAD design (AutoDesk Fusion, KiCad)
+		- PCB manufacturing
+		- firmware flashing
+		- soldering
+		- auxiliary: wires, tools, pins, resistors, emulator etc.
+	- mechanics
+		- plastic (PLA/ABS/etc)
+			- 3D printing
+				- CAD design & slicing (PruseSlicer)
+				- bed leveling
+		- metal
+			- purchase
+			- machined
+				- CAD design (AutoDesk Fusion, SolidWorks)
+	- software
